@@ -1,0 +1,363 @@
+@charset "utf-8";
+
+//共通設定
+$pc: 768px; //pc（変数名） $→変数宣言
+
+@mixin pc {       /*pc→自作関数の名前*/
+  @media (min-width: ($pc)) {
+    @content;     /*その都度処理の記述*/
+  }
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Dancing Script', cursive;
+  font-family: 'Montserrat', sans-serif;
+  background-color: #fafafa;
+}
+
+header,
+footer {
+  background-color: #C57D86;
+}
+
+h2 {
+  text-align: center;
+  font-weight: bold;
+  margin-top: 50px;
+  color: #9C9CA1;
+}
+
+// img {
+//   max-width: 100%;
+//   height: auto;
+//   vertical-align: bottom;
+// }
+
+a {
+ color: #F5EFEA;
+  text-decoration: none;
+}
+
+a:hover {
+  opacity: 0.5;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+.flex {
+  display: flex;
+}
+
+/*========================
+.wrapperの設定
+======================== */
+.wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/*========================
+.headerの設定
+======================== */
+.flex01 {
+  font-size: 24px;
+}
+
+
+/*========================
+.navの設定
+======================== */
+.nav {
+  &__list {
+    justify-content: space-around;
+    text-align: center;
+    margin: 0 100px;
+  }
+}
+
+.flex01 {
+  &__item {
+   flex: 1 1 20%;
+   padding: 30px 0;
+  }
+}
+
+/*========================
+FVの設定
+======================== */
+.fv {
+  background-color: #E2BEBA;
+  // position: relative;
+
+  &__inner {
+    background-image: url(../images/cat01.png);
+    background-repeat: no-repeat;
+    // background-size: 1000px 800px;
+    // background-size: contain;
+    background-size: cover;                                  
+    background-position: 250px -600px;                  //L106　paddingで縦幅指定し、ポジション設定おかしい？
+    opacity: .3;
+  }
+  
+  &__ttl {
+    // color: #fff;
+    font-family: 'Dancing Script', cursive;
+    padding: 310px 0 200px 0;
+    text-align: center;
+    font-size: 45px;
+    font-weight: bold;
+  }
+}
+
+span {
+  font-size: 100px;
+  font-weight: bold;
+}
+
+/*========================
+Profileの設定
+======================== */
+.profile {
+  &__introduction {
+    line-height: 1.8em;
+  }
+
+  &__ttl {
+    padding: 20px 0;
+    margin: 30px 0;
+    background-image: url(../images/catfootsteps.png);
+    background-repeat: no-repeat;
+    background-size: 200px 200px;
+    background-position: center center;
+    // opacity: .4;                                          //グレーアイコンと差し替えたら消す
+  }
+
+  img {
+    width: 300px;
+    height: 250px;
+    vertical-align: bottom;
+  }
+  
+  &__flex {
+    margin: 0 auto;
+    max-width: 1000px;
+  }
+
+  &__h3 {
+    padding: 10px 0;
+  }
+
+  &__h3 span {
+    color: red;
+    font-size: 20px;
+  }
+
+  &__flexL {
+    margin-right: 50px;
+  }
+  
+  &__introLong {
+    margin: 35px auto 30px;
+    // text-align: center;
+    max-width: 1000px;
+  }
+}
+
+p.indent {
+    padding-left: 4em;
+    text-indent: -４em;
+}
+
+/*========================
+Worksの設定                                            
+======================== */
+.works {
+  background-color: #F5F0EA;
+  // margin-bottom: 50px;
+  background-image: url(/images/cat02.png);
+  background-position: right top;
+  background-size: cover;
+
+
+  &__ttl {
+    padding: 50px 0;
+  }
+
+  &__item {
+    margin: 20px;         //??mgかけたら２段めがずれる
+  }
+
+  &__item img {
+    max-width: 100%;
+    vertical-align: bottom;
+  }
+}
+
+/*========================
+Skillsの設定
+======================== */
+.skills {
+  &__ttl {
+    padding: 50px 0;
+    margin-top: 0;
+  }
+
+  // &__meter {                        //skillsメーターの箱
+  //   width: 400px;
+  //   height: 250px;
+  //   background-color: aquamarine;
+  //   text-align: center;                          
+  //   margin: 0 auto;
+  // }
+
+  &__period {
+    text-align: center;
+    padding: 50px;
+}
+
+  &__ttlH3 {
+    margin-left: 55px;
+    margin-bottom: 40px;
+}
+}
+
+.flexCoding,
+.flexOffice,
+.flexDesign {
+  &__wrap {
+    display: flex;
+    }
+
+  &__container {
+      flex-direction: column;
+    }
+
+    &__LR {
+      display: flex;
+      align-items: flex-start;        //ロゴが間延びしたのを修正
+      margin-bottom: 30px;
+      margin-left: 50px;
+      width: 550px;      //テキストの右端終わりがセンターになるようにするため（コンテンツ幅1200, 両サイドmg50）
+    }
+
+    &__R {
+      margin-left: 20px;
+      margin-bottom: 30px;
+    }
+}
+
+.flexDesign__R {
+  margin: 0 20px 30px 0;
+}
+
+.flexCoding__LR img,
+.flexDesign__LR img,
+.flexOffice__LR img {
+  width: 80px;
+  height: 80px;
+}
+
+.ttlDesign {
+  text-align: right;
+}
+
+.cat02 {
+  width: 30%;
+  height: auto;
+  margin: auto;
+  opacity: .7;
+}
+
+ .cat03 {
+  width: 35%;
+  height: auto;
+  margin: 0 auto;
+  opacity: .7;
+}
+
+/*========================
+Contactの設定
+======================== */
+.contact {
+  background-color: #F5EFEA;
+  position: relative;
+}
+
+.form {
+  padding: 1em;
+  text-align: center;
+}
+
+.label {
+  margin-bottom: 30px;
+  display: block;
+  text-align: center;
+}
+
+.label p {
+  text-align: left;
+  display: inline-block;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 400px;
+  padding: 0.5em 1em;
+  border: 2px solid #aaa;
+  border-radius: 10px;
+  margin: 10px 0 20px;
+}
+
+textarea {
+  height: 11em;
+  width: 500px;
+}
+
+input[type="submit"] {
+  border-radius: 20px;
+  background-color: #C57D86;
+  color: #F5EFEA;
+  width: 150px;
+  height: 50px;
+  font-weight: bold;
+}
+
+.required {
+  color: red;
+  font-size: 16px;
+}
+
+.contactBg {
+  position: absolute;
+  top: 610px;
+  background-image: url(../images/cat04.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 400px;
+   height: 270px;
+  opacity: .5;
+}
+
+
+/*========================
+footerの設定
+======================== */
+.footer {
+  height: 60px;
+  text-align: center;
+}
+
+.copyright {
+  line-height: 60px;
+  color:#F5EFEA;
+}

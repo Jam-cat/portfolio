@@ -1,0 +1,321 @@
+@charset "UTF-8";
+/*共通設定
+--------------------------------*/
+.wrapper {
+  margin: 0 auto; }
+
+.section {
+  margin-top: 80px;
+  margin-bottom: 20px; }
+
+h2 {
+  font-size: 20px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  padding-top: 50px;
+  text-align: center; }
+  @media (min-width: 768px) {
+    h2 {
+      font-size: 24px; } }
+
+.h2deco {
+  border-left: 3px dotted #14C35E;
+  padding-left: 7px; }
+
+h3 {
+  font-size: 16px;
+  margin: 20px 20px 30px 20px;
+  text-align: center; }
+  @media (min-width: 768px) {
+    h3 {
+      font-size: 18px; } }
+
+.h3deco {
+  border-bottom: 3px dotted #14C35E;
+  padding-bottom: 5px; }
+
+p {
+  font-size: 14px;
+  line-height: 1.8; }
+  @media (min-width: 768px) {
+    p {
+      font-size: 16px; } }
+
+a {
+  text-decoration: none; }
+
+a:hover {
+  background-color: salmon;
+  opacity: 1; }
+
+ul,
+ol {
+  list-style-type: none; }
+
+li {
+  list-style-type: none; }
+
+img {
+  max-width: 100%;
+  height: auto; }
+
+/*----------ボタン---------------*/
+.btn {
+  font-size: 1.2rem;
+  width: 200px;
+  background: #14C35E;
+  color: #fff;
+  border-radius: 20px;
+  padding: 10px 10px; }
+
+input[type="submit"] {
+  width: 180px; }
+
+/* ハンバーガーメニュー
+--------------------------------*/
+a {
+  color: #555; }
+
+.flex {
+  display: flex;
+  flex-direction: column; }
+  @media (min-width: 768px) {
+    .flex {
+      display: none;
+      justify-content: space-between; } }
+
+header {
+  background: #A8DBA8;
+  padding: .5em 1.5em;
+  position: fixed;
+  top: 0;
+  width: 100%; }
+  @media (min-width: 768px) {
+    header {
+      padding: 1em 1.5em; } }
+
+header .wrapper {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 20px; }
+
+.header__left {
+  margin: 0 auto; }
+  @media (min-width: 768px) {
+    .header__left {
+      margin: 0 auto 0 0; } }
+
+.header__right {
+  margin: auto 0;
+  display: none; }
+  @media (min-width: 768px) {
+    .header__right {
+      display: none; } }
+
+input[type="number"],
+select {
+  border: 1px solid #79BD9A;
+  border-radius: 5px;
+  padding: .5em;
+  background: #fff; }
+
+.btnMenu {
+  width: 50px;
+  height: 50px;
+  padding: 10px 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: 2px solid #555;
+  border-radius: 5px;
+  margin-left: auto; }
+
+.btnMenu:focus {
+  outline: none; }
+
+.btnMenu span {
+  background: #555;
+  display: block;
+  width: 100%;
+  height: 5px; }
+
+.close span:first-child {
+  transform: rotate(45deg) translate(4px, -5px);
+  transform-origin: left top; }
+
+.close span:nth-child(2) {
+  transform: rotate(-45deg) translate(7px, -7px); }
+
+.close span:last-child {
+  display: none; }
+
+#nav {
+  display: none; }
+  @media (min-width: 768px) {
+    #nav {
+      display: flex; } }
+
+#nav.open {
+  display: block;
+  position: fixed;
+  top: 70px;
+  right: 0;
+  background: #fff;
+  z-index: 100; }
+
+.nav__list {
+  width: 30vw;
+  height: auto; }
+
+.nav__item {
+  border-bottom: 1px dotted #79BD9A; }
+
+.nav__link {
+  padding: .8em 0px .8em 1em;
+  display: block; }
+
+/* -----ハンバーガーメニューここまで------*/
+/*  ヘッダー
+--------------------------------*/
+.header__inner {
+  flex-direction: row;
+  justify-content: space-between; }
+  @media (min-width: 768px) {
+    .header__inner {
+      display: flex; } }
+.header__ttl {
+  text-align: center;
+  width: 250px; }
+
+.nav__item {
+  padding: 12px;
+  text-align: center; }
+
+header p {
+  margin: 20px auto; }
+
+/*  FV（スライドショーswiper使う予定）
+--------------------------------*/
+.fv img {
+  width: 100%; }
+
+/*  当院について about
+--------------------------------*/
+.about {
+  margin-top: 0; }
+  .about__ttl {
+    margin-top: 0; }
+  .about__txt {
+    padding: 20px 30px; }
+
+/*  託児サービス kidsSvc
+--------------------------------*/
+.kidsSvc {
+  margin-top: 0;
+  background-color: #FFFAF2; }
+  .kidsSvc__txt {
+    padding: 20px 30px; }
+  .kidsSvc img {
+    padding-bottom: 80px; }
+
+/*  診療案内 treatInfo
+--------------------------------*/
+.treatInfo {
+  margin-top: 30px; }
+
+.treatInfo h2 {
+  padding-top: 0;
+  margin-bottom: 50px; }
+
+.treat {
+  /*@include pc {
+    min-width: 1200px;
+  }*/ }
+  .treat__01 p, .treat__02 p, .treat__03 p {
+    padding: 0 30px; }
+  .treat__02, .treat__03 {
+    margin-top: 90px; }
+
+/*  診療時間 hours
+--------------------------------*/
+.hours {
+  background-color: #FFFAF2;
+  padding-bottom: 50px; }
+
+.tableWrap {
+  max-width: 100%;
+  overflow-x: scroll;
+  margin: 0 auto; }
+
+table {
+  margin-top: 10px;
+  max-width: 400px;
+  margin: 0 auto; }
+
+table,
+td,
+th {
+  text-align: center; }
+
+th {
+  color: #fff;
+  padding: 4px 12px; }
+
+td {
+  background: #f5f6f8;
+  padding: 4px 12px; }
+
+table th,
+table td {
+  border: none;
+  padding: 30px; }
+
+.tableWraptxt {
+  max-width: 100%;
+  margin: 0 auto; }
+  .tableWraptxt__scroll {
+    margin-top: 8px; }
+  .tableWraptxt__txt {
+    text-align: center;
+    margin-top: 20px; }
+  .tableWraptxt__btnLong {
+    width: 300px;
+    margin: 30px auto; }
+  .tableWraptxt__btnLong input[type="submit"] {
+    width: 280px;
+    line-height: 2.5em; }
+
+.tr01 {
+  color: #fff;
+  background-color: #14C35E; }
+
+.time {
+  color: #000; }
+
+/*  アクセス
+--------------------------------*/
+.access__ttl {
+  padding-top: 0; }
+.access__txt, .access__txtParking {
+  text-align: center; }
+.access__txtParking {
+  margin-top: 30px; }
+.access__map iframe {
+  width: 100%;
+  margin-top: 30px;
+  padding-left: 30px;
+  padding-right: 30px; }
+
+.btn03 {
+  margin: 30px auto 0; }
+
+/*  フッター
+--------------------------------*/
+.footer {
+  background-color: #E5F9ED;
+  height: 80px;
+  margin-top: 30px;
+  margin-bottom: 0; }
+  .footer__copy {
+    text-align: center;
+    padding: 30px 0; }
