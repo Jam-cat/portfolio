@@ -327,10 +327,10 @@ header p {
   margin-bottom: 50px;
 }
 
-.treat {
-  /*@include pc {
-    min-width: 1200px;
-  }*/
+// .treat {
+//   @include pc {
+//     min-width: 1200px;
+//   }
   
   &__01 p,
   &__02 p,
@@ -342,7 +342,6 @@ header p {
   &__03 {
     margin-top: 90px;
   }
-}
 
 
 /*  診療時間 hours
