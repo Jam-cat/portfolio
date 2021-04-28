@@ -26,6 +26,11 @@ footer {
   background-color: #C57D86;
 }
 
+section {
+  margin-top: 70px;
+  margin-bottom: 70px;
+}
+
 h2 {
   text-align: center;
   font-weight: bold;
@@ -33,11 +38,15 @@ h2 {
   color: #9C9CA1;
 }
 
-// img {
-//   max-width: 100%;
-//   height: auto;
-//   vertical-align: bottom;
-// }
+span {
+  font-weight: bold;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: bottom;
+}
 
 a {
  color: #F5EFEA;
@@ -54,6 +63,7 @@ ul, ol {
 
 .flex {
   display: flex;
+  justify-content: space-between;
 }
 
 /*========================
@@ -106,9 +116,8 @@ header {
   &__inner {
     background-image: url(../images/cat01.png);
     background-repeat: no-repeat;
-    background-size: 90% auto;
-    background-position: right -120% bottom 40%;                                  
-    //background-position: 250px -550px;                  //L106　paddingで縦幅指定し、ポジション設定おかしい？
+    background-size: 45% auto;
+    background-position: right bottom;
     opacity: .3;
   }
   
@@ -122,9 +131,8 @@ header {
   }
 }
 
-span {
+.portfolio {
   font-size: 100px;
-  font-weight: bold;
 }
 
 /*========================
@@ -145,30 +153,33 @@ Profileの設定
     // opacity: .4;                                          //グレーアイコンと差し替えたら消す
   }
 
-  img {
-    width: 300px;
-    height: 250px;
-    vertical-align: bottom;
-  }
+// プロフィール 左側 顔写真
+  // img {
+  //   width: 300px;
+  // }
   
   &__flex {
     margin: 0 auto;
     max-width: 1000px;
+    margin-bottom: 80px;
   }
 
   &__h3 {
     padding: 10px 0;
   }
 
-  &__h3 span {
-    color: red;
-    font-size: 20px;
-  }
-
   &__flexL {
     margin-right: 50px;
   }
-  
+
+  // 右下の海外ドラマDVD
+  &__flexRB {
+    margin-top: 30px;  
+  img {
+    width: 20%;
+    }
+  }
+ 
   &__introLong {
     margin: 35px auto 30px;
     // text-align: center;
@@ -176,9 +187,10 @@ Profileの設定
   }
 }
 
-p.indent {
-    padding-left: 4em;
-    text-indent: -４em;
+// その他
+.others {
+  max-width: 1000px;
+  margin: 0 auto;
 }
 
 /*========================
@@ -190,6 +202,7 @@ Worksの設定
   background-image: url(/images/cat02.png);
   background-position: right top;
   background-size: cover;
+  padding-bottom: 70px;
 
 
   &__ttl {
@@ -225,13 +238,27 @@ Skillsの設定
 
   &__period {
     text-align: center;
-    padding: 50px;
+    padding-bottom: 50px;
 }
 
   &__ttlH3 {
     margin-left: 55px;
     margin-bottom: 40px;
 }
+  .ttlDesign {
+    margin-bottom: 0;
+    margin-left: 0;
+    margin-top: 50px;
+  }
+
+  .ttlOffice {
+    margin-top: 50px;
+  }
+
+}
+
+.flexDesign__container {
+  margin-top: 30px;
 }
 
 .flexCoding,
@@ -239,10 +266,6 @@ Skillsの設定
 .flexDesign {
   &__wrap {
     display: flex;
-    }
-
-  &__container {
-      flex-direction: column;
     }
 
     &__LR {
@@ -294,6 +317,7 @@ Contactの設定
 .contact {
   background-color: #F5EFEA;
   position: relative;
+  margin-bottom: 0;
 }
 
 .form {

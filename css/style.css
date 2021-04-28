@@ -1,335 +1,435 @@
 @charset "UTF-8";
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+/*共通設定
+--------------------------------*/
+.wrapper {
+  margin: 0 auto;
 }
 
-body {
-  font-family: 'Dancing Script', cursive;
-  font-family: 'Montserrat', sans-serif;
-  background-color: #fafafa;
-}
-
-header,
-footer {
-  background-color: #C57D86;
+.section {
+  margin-top: 80px;
+  margin-bottom: 20px;
 }
 
 h2 {
+  font-size: 20px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  padding-top: 50px;
   text-align: center;
-  font-weight: bold;
-  margin-top: 50px;
-  color: #9C9CA1;
+}
+
+@media (min-width: 768px) {
+  h2 {
+    font-size: 24px;
+  }
+}
+
+.h2deco {
+  border-left: 3px dotted #14C35E;
+  padding-left: 7px;
+}
+
+h3 {
+  font-size: 16px;
+  margin: 20px 20px 30px 20px;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  h3 {
+    font-size: 18px;
+  }
+}
+
+.h3deco {
+  border-bottom: 3px dotted #14C35E;
+  padding-bottom: 5px;
+}
+
+p {
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+@media (min-width: 768px) {
+  p {
+    font-size: 16px;
+  }
 }
 
 a {
-  color: #F5EFEA;
   text-decoration: none;
 }
 
 a:hover {
-  opacity: 0.5;
+  background-color: salmon;
+  opacity: 1;
 }
 
-ul, ol {
-  list-style: none;
+ul,
+ol {
+  list-style-type: none;
+}
+
+li {
+  list-style-type: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/*----------ボタン---------------*/
+.btn {
+  font-size: 1.2rem;
+  width: 200px;
+  background: #14C35E;
+  color: #fff;
+  border-radius: 20px;
+  padding: 10px 10px;
+}
+
+input[type="submit"] {
+  width: 180px;
+}
+
+/* ハンバーガーメニュー
+--------------------------------*/
+a {
+  color: #555;
 }
 
 .flex {
   display: flex;
-}
-
-/*========================
-.wrapperの設定
-======================== */
-.wrapper {
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-/*========================
-.headerの設定
-======================== */
-header {
-  width: 100%;
-  height: 100px;
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 1;
-}
-
-/*========================
-.navの設定
-======================== */
-.nav__list {
-  justify-content: space-around;
-  text-align: center;
-  margin: 0 100px;
-}
-
-.flex01 {
-  font-size: 24px;
-}
-
-.flex01__item {
-  flex: 1 1 20%;
-  padding: 30px 0;
-}
-
-/*========================
-ファーストビューFVの設定
-======================== */
-.fv {
-  background-color: #E2BEBA;
-}
-
-.fv__inner {
-  background-image: url(../images/cat01.png);
-  background-repeat: no-repeat;
-  background-size: 90% auto;
-  background-position: right -120% bottom 40%;
-  opacity: .3;
-}
-
-.fv__ttl {
-  font-family: 'Dancing Script', cursive;
-  padding: 310px 0 200px 0;
-  text-align: center;
-  font-size: 45px;
-  font-weight: bold;
-}
-
-span {
-  font-size: 100px;
-  font-weight: bold;
-}
-
-/*========================
-Profileの設定
-======================== */
-.profile__introduction {
-  line-height: 1.8em;
-}
-
-.profile__ttl {
-  padding: 20px 0;
-  margin: 30px 0;
-  background-image: url(../images/catfootsteps.png);
-  background-repeat: no-repeat;
-  background-size: 200px 200px;
-  background-position: center center;
-}
-
-.profile img {
-  width: 300px;
-  height: 250px;
-  vertical-align: bottom;
-}
-
-.profile__flex {
-  margin: 0 auto;
-  max-width: 1000px;
-}
-
-.profile__h3 {
-  padding: 10px 0;
-}
-
-.profile__h3 span {
-  color: red;
-  font-size: 20px;
-}
-
-.profile__flexL {
-  margin-right: 50px;
-}
-
-.profile__introLong {
-  margin: 35px auto 30px;
-  max-width: 1000px;
-}
-
-p.indent {
-  padding-left: 4em;
-  text-indent: -４em;
-}
-
-/*========================
-Worksの設定                                            
-======================== */
-.works {
-  background-color: #F5F0EA;
-  background-image: url(/images/cat02.png);
-  background-position: right top;
-  background-size: cover;
-}
-
-.works__ttl {
-  padding: 50px 0;
-}
-
-.works__item {
-  margin: 20px;
-}
-
-.works__item img {
-  max-width: 100%;
-  vertical-align: bottom;
-}
-
-/*========================
-Skillsの設定
-======================== */
-.skills__ttl {
-  padding: 50px 0;
-  margin-top: 0;
-}
-
-.skills__period {
-  text-align: center;
-  padding: 50px;
-}
-
-.skills__ttlH3 {
-  margin-left: 55px;
-  margin-bottom: 40px;
-}
-
-.flexCoding__wrap,
-.flexOffice__wrap,
-.flexDesign__wrap {
-  display: flex;
-}
-
-.flexCoding__container,
-.flexOffice__container,
-.flexDesign__container {
   flex-direction: column;
 }
 
-.flexCoding__LR,
-.flexOffice__LR,
-.flexDesign__LR {
+@media (min-width: 768px) {
+  .flex {
+    display: none;
+    justify-content: space-between;
+  }
+}
+
+header {
+  background: #A8DBA8;
+  padding: .5em 1.5em;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  header {
+    padding: 1em 1.5em;
+  }
+}
+
+header .wrapper {
   display: flex;
-  align-items: flex-start;
-  margin-bottom: 30px;
-  margin-left: 50px;
-  width: 550px;
+  justify-content: space-between;
+  padding: 0 20px;
 }
 
-.flexCoding__R,
-.flexOffice__R,
-.flexDesign__R {
-  margin-left: 20px;
-  margin-bottom: 30px;
-}
-
-.flexDesign__R {
-  margin: 0 20px 30px 0;
-}
-
-.flexCoding__LR img,
-.flexDesign__LR img,
-.flexOffice__LR img {
-  width: 80px;
-  height: 80px;
-}
-
-.ttlDesign {
-  text-align: right;
-}
-
-.cat02 {
-  width: 30%;
-  height: auto;
-  margin: auto;
-  opacity: .7;
-}
-
-.cat03 {
-  width: 35%;
-  height: auto;
+.header__left {
   margin: 0 auto;
-  opacity: .7;
 }
 
-/*========================
-Contactの設定
-======================== */
-.contact {
-  background-color: #F5EFEA;
-  position: relative;
+@media (min-width: 768px) {
+  .header__left {
+    margin: 0 auto 0 0;
+  }
 }
 
-.form {
-  padding: 1em;
-  text-align: center;
+.header__right {
+  margin: auto 0;
+  display: none;
 }
 
-.label {
-  margin-bottom: 30px;
-  display: block;
-  text-align: center;
+@media (min-width: 768px) {
+  .header__right {
+    display: none;
+  }
 }
 
-.label p {
-  text-align: left;
-  display: inline-block;
+input[type="number"],
+select {
+  border: 1px solid #79BD9A;
+  border-radius: 5px;
+  padding: .5em;
+  background: #fff;
 }
 
-input[type="text"],
-input[type="email"],
-textarea {
-  width: 400px;
-  padding: 0.5em 1em;
-  border: 2px solid #aaa;
-  border-radius: 10px;
-  margin: 10px 0 20px;
-}
-
-textarea {
-  height: 11em;
-  width: 500px;
-}
-
-input[type="submit"] {
-  border-radius: 20px;
-  background-color: #C57D86;
-  color: #F5EFEA;
-  width: 150px;
+.btnMenu {
+  width: 50px;
   height: 50px;
-  font-weight: bold;
+  padding: 10px 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: 2px solid #555;
+  border-radius: 5px;
+  margin-left: auto;
 }
 
-.required {
-  color: red;
-  font-size: 16px;
+.btnMenu:focus {
+  outline: none;
 }
 
-.contactBg {
-  position: absolute;
-  top: 610px;
-  background-image: url(../images/cat04.png);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
-  width: 400px;
-  height: 270px;
-  opacity: .5;
+.btnMenu span {
+  background: #555;
+  display: block;
+  width: 100%;
+  height: 5px;
 }
 
-/*========================
-footerの設定
-======================== */
-.footer {
-  height: 60px;
+.close span:first-child {
+  transform: rotate(45deg) translate(4px, -5px);
+  transform-origin: left top;
+}
+
+.close span:nth-child(2) {
+  transform: rotate(-45deg) translate(7px, -7px);
+}
+
+.close span:last-child {
+  display: none;
+}
+
+#nav {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  #nav {
+    display: flex;
+  }
+}
+
+#nav.open {
+  display: block;
+  position: fixed;
+  top: 70px;
+  right: 0;
+  background: #fff;
+  z-index: 100;
+}
+
+.nav__list {
+  width: 30vw;
+  height: auto;
+}
+
+.nav__item {
+  border-bottom: 1px dotted #79BD9A;
+}
+
+.nav__link {
+  padding: .8em 0px .8em 1em;
+  display: block;
+}
+
+/* -----ハンバーガーメニューここまで------*/
+/*  ヘッダー
+--------------------------------*/
+.header__inner {
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+@media (min-width: 768px) {
+  .header__inner {
+    display: flex;
+  }
+}
+
+.header__ttl {
+  text-align: center;
+  width: 250px;
+}
+
+.nav__item {
+  padding: 12px;
   text-align: center;
 }
 
-.copyright {
-  line-height: 60px;
-  color: #F5EFEA;
+header p {
+  margin: 20px auto;
+}
+
+/*  FV（スライドショーswiper使う予定）
+--------------------------------*/
+.fv img {
+  width: 100%;
+}
+
+/*  当院について about
+--------------------------------*/
+.about {
+  margin-top: 0;
+}
+
+.about__ttl {
+  margin-top: 0;
+}
+
+.about__txt {
+  padding: 20px 30px;
+}
+
+/*  託児サービス kidsSvc
+--------------------------------*/
+.kidsSvc {
+  margin-top: 0;
+  background-color: #FFFAF2;
+}
+
+.kidsSvc__txt {
+  padding: 20px 30px;
+}
+
+.kidsSvc img {
+  padding-bottom: 80px;
+}
+
+/*  診療案内 treatInfo
+--------------------------------*/
+.treatInfo {
+  margin-top: 30px;
+}
+
+.treatInfo h2 {
+  padding-top: 0;
+  margin-bottom: 50px;
+}
+
+.treat {
+  /*@include pc {
+    min-width: 1200px;
+  }*/
+}
+
+.treat__01 p,
+.treat__02 p,
+.treat__03 p {
+  padding: 0 30px;
+}
+
+.treat__02, .treat__03 {
+  margin-top: 90px;
+}
+
+/*  診療時間 hours
+--------------------------------*/
+.hours {
+  background-color: #FFFAF2;
+  padding-bottom: 50px;
+}
+
+.tableWrap {
+  max-width: 100%;
+  overflow-x: scroll;
+  margin: 0 auto;
+}
+
+table {
+  margin-top: 10px;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+table,
+td,
+th {
+  text-align: center;
+}
+
+th {
+  color: #fff;
+  padding: 4px 12px;
+}
+
+td {
+  background: #f5f6f8;
+  padding: 4px 12px;
+}
+
+table th,
+table td {
+  border: none;
+  padding: 30px;
+}
+
+.tableWraptxt {
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.tableWraptxt__scroll {
+  margin-top: 8px;
+}
+
+.tableWraptxt__txt {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.tableWraptxt__btnLong {
+  width: 300px;
+  margin: 30px auto;
+}
+
+.tableWraptxt__btnLong input[type="submit"] {
+  width: 280px;
+  line-height: 2.5em;
+}
+
+.tr01 {
+  color: #fff;
+  background-color: #14C35E;
+}
+
+.time {
+  color: #000;
+}
+
+/*  アクセス
+--------------------------------*/
+.access__ttl {
+  padding-top: 0;
+}
+
+.access__txt, .access__txtParking {
+  text-align: center;
+}
+
+.access__txtParking {
+  margin-top: 30px;
+}
+
+.access__map iframe {
+  width: 100%;
+  margin-top: 30px;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.btn03 {
+  margin: 30px auto 0;
+}
+
+/*  フッター
+--------------------------------*/
+.footer {
+  background-color: #E5F9ED;
+  height: 80px;
+  margin-top: 30px;
+  margin-bottom: 0;
+}
+
+.footer__copy {
+  text-align: center;
+  padding: 30px 0;
 }
 /*# sourceMappingURL=style.css.map */
