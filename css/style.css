@@ -1,435 +1,358 @@
 @charset "UTF-8";
-/*共通設定
---------------------------------*/
-.wrapper {
-  margin: 0 auto;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-.section {
-  margin-top: 80px;
-  margin-bottom: 20px;
+body {
+  font-family: 'Dancing Script', cursive;
+  font-family: 'Montserrat', sans-serif;
+  background-color: #fafafa;
+}
+
+header,
+footer {
+  background-color: #C57D86;
+}
+
+section {
+  margin-top: 70px;
+  margin-bottom: 70px;
 }
 
 h2 {
-  font-size: 20px;
-  margin-top: 30px;
-  margin-bottom: 30px;
-  padding-top: 50px;
   text-align: center;
+  font-weight: bold;
+  margin-top: 50px;
+  color: #9C9CA1;
 }
 
-@media (min-width: 768px) {
-  h2 {
-    font-size: 24px;
-  }
-}
-
-.h2deco {
-  border-left: 3px dotted #14C35E;
-  padding-left: 7px;
-}
-
-h3 {
-  font-size: 16px;
-  margin: 20px 20px 30px 20px;
-  text-align: center;
-}
-
-@media (min-width: 768px) {
-  h3 {
-    font-size: 18px;
-  }
-}
-
-.h3deco {
-  border-bottom: 3px dotted #14C35E;
-  padding-bottom: 5px;
-}
-
-p {
-  font-size: 14px;
-  line-height: 1.8;
-}
-
-@media (min-width: 768px) {
-  p {
-    font-size: 16px;
-  }
-}
-
-a {
-  text-decoration: none;
-}
-
-a:hover {
-  background-color: salmon;
-  opacity: 1;
-}
-
-ul,
-ol {
-  list-style-type: none;
-}
-
-li {
-  list-style-type: none;
+span {
+  font-weight: bold;
 }
 
 img {
   max-width: 100%;
   height: auto;
+  vertical-align: bottom;
 }
 
-/*----------ボタン---------------*/
-.btn {
-  font-size: 1.2rem;
-  width: 200px;
-  background: #14C35E;
-  color: #fff;
-  border-radius: 20px;
-  padding: 10px 10px;
-}
-
-input[type="submit"] {
-  width: 180px;
-}
-
-/* ハンバーガーメニュー
---------------------------------*/
 a {
-  color: #555;
+  color: #F5EFEA;
+  text-decoration: none;
+}
+
+a:hover {
+  opacity: 0.5;
+}
+
+ul, ol {
+  list-style: none;
 }
 
 .flex {
   display: flex;
-  flex-direction: column;
-}
-
-@media (min-width: 768px) {
-  .flex {
-    display: none;
-    justify-content: space-between;
-  }
-}
-
-header {
-  background: #A8DBA8;
-  padding: .5em 1.5em;
-  position: fixed;
-  top: 0;
-  width: 100%;
-}
-
-@media (min-width: 768px) {
-  header {
-    padding: 1em 1.5em;
-  }
-}
-
-header .wrapper {
-  display: flex;
   justify-content: space-between;
-  padding: 0 20px;
 }
 
-.header__left {
+/*========================
+.wrapperの設定
+======================== */
+.wrapper {
+  max-width: 1200px;
   margin: 0 auto;
 }
 
-@media (min-width: 768px) {
-  .header__left {
-    margin: 0 auto 0 0;
-  }
-}
-
-.header__right {
-  margin: auto 0;
-  display: none;
-}
-
-@media (min-width: 768px) {
-  .header__right {
-    display: none;
-  }
-}
-
-input[type="number"],
-select {
-  border: 1px solid #79BD9A;
-  border-radius: 5px;
-  padding: .5em;
-  background: #fff;
-}
-
-.btnMenu {
-  width: 50px;
-  height: 50px;
-  padding: 10px 5px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  border: 2px solid #555;
-  border-radius: 5px;
-  margin-left: auto;
-}
-
-.btnMenu:focus {
-  outline: none;
-}
-
-.btnMenu span {
-  background: #555;
-  display: block;
+/*========================
+.headerの設定
+======================== */
+header {
   width: 100%;
-  height: 5px;
-}
-
-.close span:first-child {
-  transform: rotate(45deg) translate(4px, -5px);
-  transform-origin: left top;
-}
-
-.close span:nth-child(2) {
-  transform: rotate(-45deg) translate(7px, -7px);
-}
-
-.close span:last-child {
-  display: none;
-}
-
-#nav {
-  display: none;
-}
-
-@media (min-width: 768px) {
-  #nav {
-    display: flex;
-  }
-}
-
-#nav.open {
-  display: block;
+  height: 100px;
   position: fixed;
-  top: 70px;
-  right: 0;
-  background: #fff;
-  z-index: 100;
+  top: 0;
+  left: 0;
+  z-index: 1;
 }
 
+/*========================
+.navの設定
+======================== */
 .nav__list {
-  width: 30vw;
-  height: auto;
-}
-
-.nav__item {
-  border-bottom: 1px dotted #79BD9A;
-}
-
-.nav__link {
-  padding: .8em 0px .8em 1em;
-  display: block;
-}
-
-/* -----ハンバーガーメニューここまで------*/
-/*  ヘッダー
---------------------------------*/
-.header__inner {
-  flex-direction: row;
-  justify-content: space-between;
-}
-
-@media (min-width: 768px) {
-  .header__inner {
-    display: flex;
-  }
-}
-
-.header__ttl {
+  justify-content: space-around;
   text-align: center;
-  width: 250px;
+  margin: 0 100px;
 }
 
-.nav__item {
-  padding: 12px;
+.flex01 {
+  font-size: 24px;
+}
+
+.flex01__item {
+  flex: 1 1 20%;
+  padding: 30px 0;
+}
+
+/*========================
+ファーストビューFVの設定
+======================== */
+.fv {
+  background-color: #E2BEBA;
+}
+
+.fv__inner {
+  background-image: url(../images/cat01.png);
+  background-repeat: no-repeat;
+  background-size: 45% auto;
+  background-position: right bottom;
+  opacity: .3;
+}
+
+.fv__ttl {
+  font-family: 'Dancing Script', cursive;
+  padding: 310px 0 200px 0;
   text-align: center;
+  font-size: 45px;
+  font-weight: bold;
 }
 
-header p {
-  margin: 20px auto;
+.portfolio {
+  font-size: 100px;
 }
 
-/*  FV（スライドショーswiper使う予定）
---------------------------------*/
-.fv img {
-  width: 100%;
+/*========================
+Profileの設定
+======================== */
+.profile__introduction {
+  line-height: 1.8em;
 }
 
-/*  当院について about
---------------------------------*/
-.about {
-  margin-top: 0;
+.profile__ttl {
+  padding: 20px 0;
+  margin: 30px 0;
+  background-image: url(../images/catfootsteps.png);
+  background-repeat: no-repeat;
+  background-size: 200px 200px;
+  background-position: center center;
 }
 
-.about__ttl {
-  margin-top: 0;
+.profile__flex {
+  margin: 0 auto;
+  max-width: 1000px;
+  margin-bottom: 80px;
 }
 
-.about__txt {
-  padding: 20px 30px;
+.profile__h3 {
+  padding: 10px 0;
 }
 
-/*  託児サービス kidsSvc
---------------------------------*/
-.kidsSvc {
-  margin-top: 0;
-  background-color: #FFFAF2;
+.profile__flexL {
+  margin-right: 50px;
 }
 
-.kidsSvc__txt {
-  padding: 20px 30px;
-}
-
-.kidsSvc img {
-  padding-bottom: 80px;
-}
-
-/*  診療案内 treatInfo
---------------------------------*/
-.treatInfo {
+.profile__flexRB {
   margin-top: 30px;
 }
 
-.treatInfo h2 {
-  padding-top: 0;
-  margin-bottom: 50px;
+.profile__flexRB img {
+  width: 20%;
 }
 
-.treat {
-  /*@include pc {
-    min-width: 1200px;
-  }*/
+.profile__introLong {
+  margin: 35px auto 30px;
+  max-width: 1000px;
 }
 
-.treat__01 p,
-.treat__02 p,
-.treat__03 p {
-  padding: 0 30px;
+.others {
+  max-width: 1000px;
+  margin: 0 auto;
 }
 
-.treat__02, .treat__03 {
-  margin-top: 90px;
+/*========================
+Worksの設定                                            
+======================== */
+.works {
+  background-color: #F5F0EA;
+  background-image: url(/images/cat02.png);
+  background-position: right top;
+  background-size: cover;
+  padding-bottom: 70px;
 }
 
-/*  診療時間 hours
---------------------------------*/
-.hours {
-  background-color: #FFFAF2;
+.works__ttl {
+  padding: 50px 0;
+}
+
+.works__item {
+  margin: 20px;
+}
+
+.works__item img {
+  max-width: 100%;
+  vertical-align: bottom;
+}
+
+/*========================
+Skillsの設定
+======================== */
+.skills__ttl {
+  padding: 50px 0;
+  margin-top: 0;
+}
+
+.skills__period {
+  text-align: center;
   padding-bottom: 50px;
 }
 
-.tableWrap {
-  max-width: 100%;
-  overflow-x: scroll;
-  margin: 0 auto;
+.skills__ttlH3 {
+  margin-left: 55px;
+  margin-bottom: 40px;
 }
 
-table {
-  margin-top: 10px;
-  max-width: 400px;
-  margin: 0 auto;
+.skills .ttlDesign {
+  margin-bottom: 0;
+  margin-left: 0;
+  margin-top: 50px;
 }
 
-table,
-td,
-th {
-  text-align: center;
+.skills .ttlOffice {
+  margin-top: 50px;
 }
 
-th {
-  color: #fff;
-  padding: 4px 12px;
-}
-
-td {
-  background: #f5f6f8;
-  padding: 4px 12px;
-}
-
-table th,
-table td {
-  border: none;
-  padding: 30px;
-}
-
-.tableWraptxt {
-  max-width: 100%;
-  margin: 0 auto;
-}
-
-.tableWraptxt__scroll {
-  margin-top: 8px;
-}
-
-.tableWraptxt__txt {
-  text-align: center;
-  margin-top: 20px;
-}
-
-.tableWraptxt__btnLong {
-  width: 300px;
-  margin: 30px auto;
-}
-
-.tableWraptxt__btnLong input[type="submit"] {
-  width: 280px;
-  line-height: 2.5em;
-}
-
-.tr01 {
-  color: #fff;
-  background-color: #14C35E;
-}
-
-.time {
-  color: #000;
-}
-
-/*  アクセス
---------------------------------*/
-.access__ttl {
-  padding-top: 0;
-}
-
-.access__txt, .access__txtParking {
-  text-align: center;
-}
-
-.access__txtParking {
+.flexDesign__container {
   margin-top: 30px;
 }
 
-.access__map iframe {
-  width: 100%;
-  margin-top: 30px;
-  padding-left: 30px;
-  padding-right: 30px;
+.flexCoding__wrap,
+.flexOffice__wrap,
+.flexDesign__wrap {
+  display: flex;
 }
 
-.btn03 {
-  margin: 30px auto 0;
+.flexCoding__LR,
+.flexOffice__LR,
+.flexDesign__LR {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 30px;
+  margin-left: 50px;
+  width: 550px;
 }
 
-/*  フッター
---------------------------------*/
-.footer {
-  background-color: #E5F9ED;
+.flexCoding__R,
+.flexOffice__R,
+.flexDesign__R {
+  margin-left: 20px;
+  margin-bottom: 30px;
+}
+
+.flexDesign__R {
+  margin: 0 20px 30px 0;
+}
+
+.flexCoding__LR img,
+.flexDesign__LR img,
+.flexOffice__LR img {
+  width: 80px;
   height: 80px;
-  margin-top: 30px;
+}
+
+.ttlDesign {
+  text-align: right;
+}
+
+.cat02 {
+  width: 30%;
+  height: auto;
+  margin: auto;
+  opacity: .7;
+}
+
+.cat03 {
+  width: 35%;
+  height: auto;
+  margin: 0 auto;
+  opacity: .7;
+}
+
+/*========================
+Contactの設定
+======================== */
+.contact {
+  background-color: #F5EFEA;
+  position: relative;
   margin-bottom: 0;
 }
 
-.footer__copy {
+.form {
+  padding: 1em;
   text-align: center;
-  padding: 30px 0;
+}
+
+.label {
+  margin-bottom: 30px;
+  display: block;
+  text-align: center;
+}
+
+.label p {
+  text-align: left;
+  display: inline-block;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 400px;
+  padding: 0.5em 1em;
+  border: 2px solid #aaa;
+  border-radius: 10px;
+  margin: 10px 0 20px;
+}
+
+textarea {
+  height: 11em;
+  width: 500px;
+}
+
+input[type="submit"] {
+  border-radius: 20px;
+  background-color: #C57D86;
+  color: #F5EFEA;
+  width: 150px;
+  height: 50px;
+  font-weight: bold;
+}
+
+.required {
+  color: red;
+  font-size: 16px;
+}
+
+.contactBg {
+  position: absolute;
+  top: 610px;
+  background-image: url(../images/cat04.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 400px;
+  height: 270px;
+  opacity: .5;
+}
+
+/*========================
+footerの設定
+======================== */
+.footer {
+  height: 60px;
+  text-align: center;
+}
+
+.copyright {
+  line-height: 60px;
+  color: #F5EFEA;
 }
 /*# sourceMappingURL=style.css.map */
