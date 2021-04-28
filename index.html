@@ -5,6 +5,12 @@
   <meta name="description" content="あまくらまゆこのポートフォリオサイト">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
+  <!-- Internet Explorer用の設定 -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+  <!-- 検索エンジンひっかからないようにする。公開時には削除（コメントアウト） -->
+  <meta name="robots" content="noindex,nofollow" />
+
   <!--    css   リセットCSS → Gフォント → 自分のstyle.css   -->
   <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
   <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -31,7 +37,7 @@
  
   <section class="fv">
         <div class="fv__inner wrapper">
-            <h1 class="fv__ttl">Mayuko Amakura's<br><span>Portfolio</span></h1>
+            <h1 class="fv__ttl">Mayuko Amakura's<br><span class="portfolio">Portfolio</span></h1>
            <!-- <img src="images/cat01.png" alt="#" class="fv__img"> -->
         </div><!-- fv__inner wrapper -->
   </section>
@@ -51,18 +57,35 @@
 
                 <div class="profile__flexR introShort">
                     <h3 class="profile__h3">プロフィール</h3>
-                    <p class="profile__shortVer">氏名&nbsp;&#58;&nbsp;天倉麻由子（アマクラマユコ）<br>出身&nbsp;&#58;&nbsp;広島<br>
-                      職歴&nbsp;&#58;&nbsp;事務職（銀行事務・一般事務（英語使用）・人事/総務事務）<br>
+                    <p class="profile__shortVer"><span>氏名</span>&nbsp;&#58;&nbsp;天倉麻由子（アマクラマユコ）<br><span>出身</span>&nbsp;&#58;&nbsp;広島<br>
+                      <span>職歴</span>&nbsp;&#58;&nbsp;事務職（銀行事務・一般事務（英語使用）・人事/総務事務）<br>
                       <!-- 就業先&nbsp;&#58;&nbsp;株式会社もみじ銀行・株式会社あじかん・株式会社三菱UFJ銀行・アサヒビール株式会社<br>公立大学法人広島県立大学 他<br> -->
-                      趣味&nbsp;&#58;&nbsp;海外ドラマを見ること。（FBIや警察など犯罪解決もの）<br>
-                      <p class="indent">その他&nbsp;&#58;&nbsp;寒いのが苦手。かつて冬の３か月間を南半球で過ごすことにより冬を避ける生活をしていた。<br>
-                      海外と日本を行ったり来たりする生活を約１０年間。<br>
-                      （例&nbsp;&#58;&nbsp;６ヶ月日本にて就業&#8594;９ヶ月海外&#8594;１年日本&#8594;３ヶ月海外&#8594;２年日本&#8594;１年半海外&nbsp;等々）<br>
-                      日本に居る間は期間限定の派遣就業（１社につき２ヶ月〜２年程度）をしておりました。
-                        </p><!-- indent -->
-                      </p>
+                    <span>趣味</span>&nbsp;&#58;&nbsp;海外ドラマを見ること。（FBIや警察など犯罪解決もの） </p>
+                    
+                    <!-- 海外ドラマのDVDの画像 -->
+                    <div class="profile__flexRB flex">
+                      <img src="images/drama-ncis.jpg" alt="#">
+                      <img src="images/drama-hawaii50.jpg" alt="#">
+                      <img src="images/drama-criminalminds.jpg" alt="#">
+                      <img src="images/drama-ncisla.jpg" alt="#">
+                    </div>
                 </div><!-- profile__flexR introShort -->
             </div><!-- profile__flex -->
+
+            <!-- その他  寒いのが苦手ほか -->
+            <div class="others flex">
+              <div class="others__flexL">
+            <p class="othersTxt">その他&nbsp;&#58;&nbsp;寒いのが苦手。かつて冬の３か月間を南半球で過ごすことにより冬を避ける生活をしていた。<br>
+              海外と日本を行ったり来たりする生活を約１０年間。<br>
+              （例&nbsp;&#58;&nbsp;６ヶ月日本にて就業&#8594;９ヶ月海外&#8594;１年日本&#8594;３ヶ月海外&#8594;２年日本&#8594;１年半海外&nbsp;等々）<br>
+              日本に居る間は期間限定の派遣就業（１社につき２ヶ月〜２年程度）をしておりました。
+                </p><!-- othersTxt -->
+              </div><!-- others__flexL -->
+
+            <div class="others__flexR">
+              <!-- パスポートの写真入れる -->
+            </div>
+          </div><!-- "others flex" -->
 
                 <div class="profile__introLong">
                     <h3 class="profile__h3">More????もっと詳しいプロフィール</h3>
@@ -110,7 +133,7 @@
               <div class="works__item">
                 <img src="images/melbourne.jpg" alt="架空サイトトップページの写真" class="works__img work01">
                 <p>架空サイト スポーツジム(全４ページ）
-                  <br>一言説明？デザインカンプをもとに、SCSS（BEM記法)にてコーディングしました。
+                  <br>一言説明する？デザインカンプをもとに、SCSS（BEM記法)にてコーディングしました。
                   <br>担当範囲：デザイン・コーディング(レスポンシブあり)
                   <br>主な使用ソフト：abobe Xd, Photoshop
                   <!-- 写真の上にロゴ乗せる（主な使用言語：HTML5, CSS3, SCSS,Java Script） -->
@@ -339,7 +362,7 @@
 
     <!-- --------------  ここからOffice365  --------------------  -->
                 <div class="skills__office">
-                  <h3 class="skills__ttlH3">Office365</h3>
+                  <h3 class="skills__ttlH3 ttlOffice">Office365</h3>
             
                     <div class="flexOffice">
                         <!--<div class="flex">-->

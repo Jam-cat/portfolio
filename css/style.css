@@ -16,11 +16,26 @@ footer {
   background-color: #C57D86;
 }
 
+section {
+  margin-top: 70px;
+  margin-bottom: 70px;
+}
+
 h2 {
   text-align: center;
   font-weight: bold;
   margin-top: 50px;
   color: #9C9CA1;
+}
+
+span {
+  font-weight: bold;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: bottom;
 }
 
 a {
@@ -38,6 +53,7 @@ ul, ol {
 
 .flex {
   display: flex;
+  justify-content: space-between;
 }
 
 /*========================
@@ -51,8 +67,13 @@ ul, ol {
 /*========================
 .headerの設定
 ======================== */
-.flex01 {
-  font-size: 24px;
+header {
+  width: 100%;
+  height: 100px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
 }
 
 /*========================
@@ -64,13 +85,17 @@ ul, ol {
   margin: 0 100px;
 }
 
+.flex01 {
+  font-size: 24px;
+}
+
 .flex01__item {
   flex: 1 1 20%;
   padding: 30px 0;
 }
 
 /*========================
-FVの設定
+ファーストビューFVの設定
 ======================== */
 .fv {
   background-color: #E2BEBA;
@@ -79,8 +104,8 @@ FVの設定
 .fv__inner {
   background-image: url(../images/cat01.png);
   background-repeat: no-repeat;
-  background-size: cover;
-  background-position: 250px -600px;
+  background-size: 45% auto;
+  background-position: right bottom;
   opacity: .3;
 }
 
@@ -92,9 +117,8 @@ FVの設定
   font-weight: bold;
 }
 
-span {
+.portfolio {
   font-size: 100px;
-  font-weight: bold;
 }
 
 /*========================
@@ -113,28 +137,26 @@ Profileの設定
   background-position: center center;
 }
 
-.profile img {
-  width: 300px;
-  height: 250px;
-  vertical-align: bottom;
-}
-
 .profile__flex {
   margin: 0 auto;
   max-width: 1000px;
+  margin-bottom: 80px;
 }
 
 .profile__h3 {
   padding: 10px 0;
 }
 
-.profile__h3 span {
-  color: red;
-  font-size: 20px;
-}
-
 .profile__flexL {
   margin-right: 50px;
+}
+
+.profile__flexRB {
+  margin-top: 30px;
+}
+
+.profile__flexRB img {
+  width: 20%;
 }
 
 .profile__introLong {
@@ -142,9 +164,9 @@ Profileの設定
   max-width: 1000px;
 }
 
-p.indent {
-  padding-left: 4em;
-  text-indent: -４em;
+.others {
+  max-width: 1000px;
+  margin: 0 auto;
 }
 
 /*========================
@@ -155,6 +177,7 @@ Worksの設定
   background-image: url(/images/cat02.png);
   background-position: right top;
   background-size: cover;
+  padding-bottom: 70px;
 }
 
 .works__ttl {
@@ -180,7 +203,7 @@ Skillsの設定
 
 .skills__period {
   text-align: center;
-  padding: 50px;
+  padding-bottom: 50px;
 }
 
 .skills__ttlH3 {
@@ -188,16 +211,24 @@ Skillsの設定
   margin-bottom: 40px;
 }
 
+.skills .ttlDesign {
+  margin-bottom: 0;
+  margin-left: 0;
+  margin-top: 50px;
+}
+
+.skills .ttlOffice {
+  margin-top: 50px;
+}
+
+.flexDesign__container {
+  margin-top: 30px;
+}
+
 .flexCoding__wrap,
 .flexOffice__wrap,
 .flexDesign__wrap {
   display: flex;
-}
-
-.flexCoding__container,
-.flexOffice__container,
-.flexDesign__container {
-  flex-direction: column;
 }
 
 .flexCoding__LR,
@@ -252,6 +283,7 @@ Contactの設定
 .contact {
   background-color: #F5EFEA;
   position: relative;
+  margin-bottom: 0;
 }
 
 .form {
