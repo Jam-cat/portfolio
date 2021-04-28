@@ -51,8 +51,13 @@ ul, ol {
 /*========================
 .headerの設定
 ======================== */
-.flex01 {
-  font-size: 24px;
+header {
+  width: 100%;
+  height: 100px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
 }
 
 /*========================
@@ -64,13 +69,17 @@ ul, ol {
   margin: 0 100px;
 }
 
+.flex01 {
+  font-size: 24px;
+}
+
 .flex01__item {
   flex: 1 1 20%;
   padding: 30px 0;
 }
 
 /*========================
-FVの設定
+ファーストビューFVの設定
 ======================== */
 .fv {
   background-color: #E2BEBA;
@@ -79,8 +88,8 @@ FVの設定
 .fv__inner {
   background-image: url(../images/cat01.png);
   background-repeat: no-repeat;
-  background-size: cover;
-  background-position: 250px -600px;
+  background-size: 90% auto;
+  background-position: right -120% bottom 40%;
   opacity: .3;
 }
 

@@ -1,11 +1,11 @@
 @charset "utf-8";
 
 //共通設定
-$pc: 768px; //pc（変数名） $→変数宣言
+$sp: 768px;
 
-@mixin pc {       /*pc→自作関数の名前*/
-  @media (min-width: ($pc)) {
-    @content;     /*その都度処理の記述*/
+@mixin sp {
+  @media (min-width: ($sp)) {
+    @content;
   }
 }
 
@@ -67,10 +67,14 @@ ul, ol {
 /*========================
 .headerの設定
 ======================== */
-.flex01 {
-  font-size: 24px;
+header {
+  width: 100%;
+  height: 100px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
 }
-
 
 /*========================
 .navの設定
@@ -84,6 +88,8 @@ ul, ol {
 }
 
 .flex01 {
+  font-size: 24px;
+
   &__item {
    flex: 1 1 20%;
    padding: 30px 0;
@@ -91,7 +97,7 @@ ul, ol {
 }
 
 /*========================
-FVの設定
+ファーストビューFVの設定
 ======================== */
 .fv {
   background-color: #E2BEBA;
@@ -100,10 +106,9 @@ FVの設定
   &__inner {
     background-image: url(../images/cat01.png);
     background-repeat: no-repeat;
-    // background-size: 1000px 800px;
-    // background-size: contain;
-    background-size: cover;                                  
-    background-position: 250px -600px;                  //L106　paddingで縦幅指定し、ポジション設定おかしい？
+    background-size: 90% auto;
+    background-position: right -120% bottom 40%;                                  
+    //background-position: 250px -550px;                  //L106　paddingで縦幅指定し、ポジション設定おかしい？
     opacity: .3;
   }
   
