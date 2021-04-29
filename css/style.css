@@ -143,10 +143,6 @@ Profileの設定
   margin-bottom: 80px;
 }
 
-.profile__h3 {
-  padding: 10px 0;
-}
-
 .profile__flexL {
   margin-right: 50px;
 }
@@ -159,19 +155,61 @@ Profileの設定
   width: 20%;
 }
 
-.profile__introLong {
-  margin: 35px auto 30px;
-  max-width: 1000px;
-}
-
 .others {
   max-width: 1000px;
   margin: 0 auto;
 }
 
+.others__flexL, .others__flexR {
+  width: 50%;
+  min-width: 350px;
+}
+
 .others__flexL {
   margin-right: 50px;
-  line-height: 2;
+  line-height: 1.9;
+}
+
+.countries {
+  margin-top: 20px;
+}
+
+.jobs {
+  margin: 70px auto;
+  max-width: 1000px;
+}
+
+.jobs__h3 {
+  padding: 10px 0;
+}
+
+.jobs__flexL, .jobs__flexR {
+  width: 50%;
+  min-width: 350px;
+}
+
+.jobs__flexL {
+  margin-right: 50px;
+}
+
+.aboutme,
+.break {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.aboutme {
+  background-color: #C57D86;
+  color: #F5EFEA;
+}
+
+.aboutme__flexL, .aboutme__flexR {
+  width: 50%;
+  min-width: 350px;
+}
+
+.aboutme__flexL {
+  margin-right: 50px;
 }
 
 /*========================

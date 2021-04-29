@@ -164,10 +164,6 @@ Profileの設定
     margin-bottom: 80px;
   }
 
-  &__h3 {
-    padding: 10px 0;
-  }
-
   &__flexL {
     margin-right: 50px;
   }
@@ -179,12 +175,6 @@ Profileの設定
     width: 20%;
     }
   }
- 
-  &__introLong {
-    margin: 35px auto 30px;
-    // text-align: center;
-    max-width: 1000px;
-  }
 }
 
 // その他
@@ -192,9 +182,63 @@ Profileの設定
   max-width: 1000px;
   margin: 0 auto;
 
+  &__flexL,
+  &__flexR {
+    width: 50%;
+    min-width: 350px;
+  }
+
   &__flexL {
     margin-right: 50px;
-    line-height: 2;
+    line-height: 1.9;
+  }
+}
+
+.countries {
+  margin-top: 20px;
+}
+
+// 職歴と派遣就業
+.jobs {
+  margin: 70px auto;
+  // text-align: center;
+  max-width: 1000px;
+
+  &__h3 {
+    padding: 10px 0;
+  }
+
+  &__flexL,
+  &__flexR {
+    width: 50%;
+    min-width: 350px;
+  }
+
+  &__flexL {
+    margin-right: 50px;
+  }
+}
+
+// 知っておいて頂きたいことaboutme
+.aboutme,
+.break {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.aboutme {
+//background-color: #E2BEBA;
+background-color: #C57D86;
+color: #F5EFEA;
+
+  &__flexL,
+  &__flexR {
+    width: 50%;
+    min-width: 350px;
+  }
+
+  &__flexL {
+    margin-right: 50px;
   }
 }
 
