@@ -191,6 +191,11 @@ Profileの設定
 .others {
   max-width: 1000px;
   margin: 0 auto;
+
+  &__flexL {
+    margin-right: 50px;
+    line-height: 2;
+  }
 }
 
 /*========================

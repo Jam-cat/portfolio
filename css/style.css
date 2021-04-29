@@ -169,6 +169,11 @@ Profileの設定
   margin: 0 auto;
 }
 
+.others__flexL {
+  margin-right: 50px;
+  line-height: 2;
+}
+
 /*========================
 Worksの設定                                            
 ======================== */
