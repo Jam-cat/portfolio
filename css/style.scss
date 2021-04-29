@@ -211,12 +211,18 @@ Worksの設定
 
   &__item {
     margin: 20px;         //??mgかけたら２段めがずれる
+    width: 30%;
   }
 
   &__item img {
     max-width: 100%;
+    min-width: 350px;
     vertical-align: bottom;
   }
+}
+
+.works h3 {
+  font-size: 18px;
 }
 
 /*========================

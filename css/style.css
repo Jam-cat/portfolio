@@ -186,11 +186,17 @@ Worksの設定
 
 .works__item {
   margin: 20px;
+  width: 30%;
 }
 
 .works__item img {
   max-width: 100%;
+  min-width: 350px;
   vertical-align: bottom;
+}
+
+.works h3 {
+  font-size: 18px;
 }
 
 /*========================
