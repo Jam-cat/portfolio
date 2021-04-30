@@ -227,6 +227,11 @@ tbody tr:nth-child(odd) {
 .aboutme {
   background-color: #C57D86;
   color: #F5EFEA;
+  padding: 2%;
+  background-image: url(../images/woman.png);
+  background-repeat: no-repeat;
+  background-size: auto 40%;
+  background-position: left 7% top 2%;
 }
 
 .aboutme__flexL, .aboutme__flexR {
@@ -236,6 +241,25 @@ tbody tr:nth-child(odd) {
 
 .aboutme__flexL {
   margin-right: 50px;
+}
+
+.aboutme__flexL .know {
+  font-size: 24px;
+}
+
+.aboutme__flexL > div {
+  display: flex;
+  justify-content: flex-end;
+  position: relative;
+}
+
+.aboutme__flexL > div > p {
+  letter-spacing: .3em;
+  line-height: 1.5;
+}
+
+.aboutme__flexL .num01 {
+  margin-top: 100px;
 }
 
 /*========================
@@ -260,7 +284,7 @@ Worksの設定
 
 .works__item img {
   max-width: 100%;
-  min-width: 350px;
+  min-width: 200px;
   vertical-align: bottom;
 }
 

@@ -257,6 +257,11 @@ tbody tr:nth-child(odd) {
 //background-color: #E2BEBA;
 background-color: #C57D86;
 color: #F5EFEA;
+padding: 2%;
+background-image: url(../images/woman.png);
+background-repeat: no-repeat;
+background-size: auto 40%;
+background-position: left 7% top 2%;
 
   &__flexL,
   &__flexR {
@@ -266,6 +271,32 @@ color: #F5EFEA;
 
   &__flexL {
     margin-right: 50px;
+  }
+
+  &__flexL .know {
+    font-size: 24px;
+  }
+
+  &__flexL > div {
+    display: flex;
+    justify-content: flex-end;
+    position: relative;
+  }
+
+  &__flexL > div > p {
+    letter-spacing: .3em;
+    line-height: 1.5;
+  }
+
+  // &__flexL img {
+  //   max-width: 30%;
+  //   position: absolute;
+  //   top: -90%;
+  //   left: 8%;
+  // }
+
+  &__flexL .num01 {
+    margin-top: 100px;
   }
 }
 
@@ -286,13 +317,13 @@ Worksの設定
   }
 
   &__item {
-    margin: 20px;         //??mgかけたら２段めがずれる
+    margin: 20px;
     width: 30%;
   }
 
   &__item img {
     max-width: 100%;
-    min-width: 350px;
+    min-width: 200px;
     vertical-align: bottom;
   }
 }
