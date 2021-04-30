@@ -190,12 +190,12 @@ Profileの設定
 
   &__flexL {
     margin-right: 50px;
-    line-height: 1.9;
+    line-height: 1.7;
   }
 }
 
 .countries {
-  margin-top: 20px;
+  margin-top: 50px;
 }
 
 // 職歴と派遣就業
@@ -216,7 +216,34 @@ Profileの設定
 
   &__flexL {
     margin-right: 50px;
+    line-height: 1.8;
   }
+
+  &__interview {
+    margin-top: 50px;
+  }
+}
+
+//職歴一覧table
+table {
+  border-collapse: collapse;
+  width: 100%;
+  text-align: center;
+}
+
+th,
+td {
+  border: 1px solid #000;
+  padding: .5em 1em;
+}
+
+thead {
+  background-color: #36339c;
+  color: #fff;
+}
+
+tbody tr:nth-child(odd) {
+  background-color: #eee;
 }
 
 // 知っておいて頂きたいことaboutme

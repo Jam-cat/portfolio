@@ -167,11 +167,11 @@ Profileの設定
 
 .others__flexL {
   margin-right: 50px;
-  line-height: 1.9;
+  line-height: 1.7;
 }
 
 .countries {
-  margin-top: 20px;
+  margin-top: 50px;
 }
 
 .jobs {
@@ -190,6 +190,32 @@ Profileの設定
 
 .jobs__flexL {
   margin-right: 50px;
+  line-height: 1.8;
+}
+
+.jobs__interview {
+  margin-top: 50px;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  text-align: center;
+}
+
+th,
+td {
+  border: 1px solid #000;
+  padding: .5em 1em;
+}
+
+thead {
+  background-color: #36339c;
+  color: #fff;
+}
+
+tbody tr:nth-child(odd) {
+  background-color: #eee;
 }
 
 .aboutme,
