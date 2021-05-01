@@ -219,8 +219,8 @@ Profileの設定
     line-height: 1.8;
   }
 
-  &__interview {
-    margin-top: 50px;
+  &__break {
+    margin-top: 30px;
   }
 }
 
@@ -247,21 +247,16 @@ tbody tr:nth-child(odd) {
 }
 
 // 知っておいて頂きたいことaboutme
-.aboutme,
-.break {
+.aboutme {
   max-width: 1000px;
   margin: 0 auto;
-}
-
-.aboutme {
-//background-color: #E2BEBA;
-background-color: #C57D86;
-color: #F5EFEA;
-padding: 2%;
-background-image: url(../images/woman.png);
-background-repeat: no-repeat;
-background-size: auto 40%;
-background-position: left 7% top 2%;
+  background-color: #C57D86;
+  color: #F5EFEA;
+  padding: 2%;
+  background-image: url(../images/woman.png);
+  background-repeat: no-repeat;
+  background-size: auto 40%;
+  background-position: left 7% top 2%;
 
   &__flexL,
   &__flexR {
@@ -288,17 +283,27 @@ background-position: left 7% top 2%;
     line-height: 1.5;
   }
 
-  // &__flexL img {
-  //   max-width: 30%;
-  //   position: absolute;
-  //   top: -90%;
-  //   left: 8%;
-  // }
-
   &__flexL .num01 {
     margin-top: 100px;
   }
+
+  &__flexR .num03 {
+    margin-top: 10px;
+  } 
+
+  &__flexL .num01 > span,
+  &__flexR .num02 > span,
+  &__flexR .num03 > span {
+    background-color: #F5EFEA;
+    color: #C57D86;
+    border-radius: 50%;
+    padding: 8px;
+    display: inline-block;
+    margin-bottom: 5px;
+  }
+
 }
+
 
 /*========================
 Worksの設定                                            

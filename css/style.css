@@ -193,8 +193,8 @@ Profileの設定
   line-height: 1.8;
 }
 
-.jobs__interview {
-  margin-top: 50px;
+.jobs__break {
+  margin-top: 30px;
 }
 
 table {
@@ -218,13 +218,9 @@ tbody tr:nth-child(odd) {
   background-color: #eee;
 }
 
-.aboutme,
-.break {
+.aboutme {
   max-width: 1000px;
   margin: 0 auto;
-}
-
-.aboutme {
   background-color: #C57D86;
   color: #F5EFEA;
   padding: 2%;
@@ -260,6 +256,21 @@ tbody tr:nth-child(odd) {
 
 .aboutme__flexL .num01 {
   margin-top: 100px;
+}
+
+.aboutme__flexR .num03 {
+  margin-top: 10px;
+}
+
+.aboutme__flexL .num01 > span,
+.aboutme__flexR .num02 > span,
+.aboutme__flexR .num03 > span {
+  background-color: #F5EFEA;
+  color: #C57D86;
+  border-radius: 50%;
+  padding: 8px;
+  display: inline-block;
+  margin-bottom: 5px;
 }
 
 /*========================
