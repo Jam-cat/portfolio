@@ -543,7 +543,6 @@ Skillsの設定
 }
 
 .skills__ttlH3 {
-  margin-left: 55px;
   margin-bottom: 40px;
 }
 
@@ -567,14 +566,20 @@ Skillsの設定
   display: flex;
 }
 
+@media (max-width: 420px) {
+  .flexCoding__wrap,
+  .flexOffice__wrap,
+  .flexDesign__wrap {
+    display: block;
+  }
+}
+
 .flexCoding__LR,
 .flexOffice__LR,
 .flexDesign__LR {
   display: flex;
   align-items: flex-start;
   margin-bottom: 30px;
-  margin-left: 50px;
-  width: 550px;
 }
 
 .flexCoding__R,
@@ -586,6 +591,7 @@ Skillsの設定
 
 .flexDesign__R {
   margin: 0 20px 30px 0;
+  width: 100%;
 }
 
 .flexCoding__LR img,
@@ -601,16 +607,26 @@ Skillsの設定
 
 .cat02 {
   width: 30%;
-  height: auto;
   margin: auto;
   opacity: .7;
 }
 
+@media (max-width: 420px) {
+  .cat02 {
+    display: none;
+  }
+}
+
 .cat03 {
   width: 35%;
-  height: auto;
   margin: 0 auto;
   opacity: .7;
+}
+
+@media (max-width: 420px) {
+  .cat03 {
+    display: none;
+  }
 }
 
 /*========================

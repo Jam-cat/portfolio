@@ -526,7 +526,6 @@ Skillsの設定
 }
 
   &__ttlH3 {
-    margin-left: 55px;
     margin-bottom: 40px;
 }
   .ttlDesign {
@@ -549,14 +548,16 @@ Skillsの設定
 .flexDesign {
   &__wrap {
     display: flex;
+
+    @include sp {
+      display: block;
+    }
     }
 
     &__LR {
       display: flex;
-      align-items: flex-start;        //ロゴが間延びしたのを修正
+      align-items: flex-start;  //ロゴが間延びしたのを修正
       margin-bottom: 30px;
-      margin-left: 50px;
-      width: 550px;      //テキストの右端終わりがセンターになるようにするため（コンテンツ幅1200, 両サイドmg50）
     }
 
     &__R {
@@ -567,6 +568,7 @@ Skillsの設定
 
 .flexDesign__R {
   margin: 0 20px 30px 0;
+  width: 100%;
 }
 
 .flexCoding__LR img,
@@ -582,16 +584,22 @@ Skillsの設定
 
 .cat02 {
   width: 30%;
-  height: auto;
   margin: auto;
   opacity: .7;
+
+  @include sp {
+    display: none;
+  }
 }
 
  .cat03 {
   width: 35%;
-  height: auto;
   margin: 0 auto;
   opacity: .7;
+
+  @include sp {
+    display: none;
+  }
 }
 
 /*========================
