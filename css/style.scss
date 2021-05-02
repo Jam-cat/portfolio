@@ -527,15 +527,40 @@ Skillsの設定
 
   &__ttlH3 {
     margin-bottom: 40px;
+
+    @include sp {
+      margin-bottom: 20px;
+      text-align: center;
+    }
 }
+
+.flexCoding {
+  &__container {
+    width: 70%;
+
+    @include sp {
+      width: 100%;
+    }
+  }
+}
+
   .ttlDesign {
     margin-bottom: 0;
     margin-left: 0;
     margin-top: 50px;
+
+    @include sp {
+      margin-top: 20px;
+      text-align: center;
+    }
   }
 
   .ttlOffice {
     margin-top: 50px;
+
+    @include sp {
+      margin-top: 30px;
+    }
   }
 }
 
@@ -583,7 +608,7 @@ Skillsの設定
 }
 
 .cat02 {
-  width: 30%;
+  width: 25%;
   margin: auto;
   opacity: .7;
 
@@ -614,10 +639,12 @@ Contactの設定
 .form {
   padding: 1em;
   text-align: center;
+  width: 1200px;
+  max-width: 100%;
 }
 
 .label {
-  margin-bottom: 30px;
+  margin: 0 auto 30px;
   display: block;
   text-align: center;
 }
@@ -639,7 +666,8 @@ textarea {
 
 textarea {
   height: 11em;
-  width: 500px;
+  max-width: 500px;
+  //width: 100%;
 }
 
 input[type="submit"] {
@@ -656,17 +684,17 @@ input[type="submit"] {
   font-size: 16px;
 }
 
-.contactBg {
-  position: absolute;
-  top: 610px;
-  background-image: url(../images/cat04.png);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
-  width: 400px;
-   height: 270px;
-  opacity: .5;
-}
+// .contactBg {
+//   position: absolute;
+//   top: 610px;
+//   background-image: url(../images/cat04.png);
+//   background-position: center;
+//   background-repeat: no-repeat;
+//   background-size: contain;
+//   width: 400px;
+//    height: 270px;
+//   opacity: .5;
+// }
 
 
 /*========================

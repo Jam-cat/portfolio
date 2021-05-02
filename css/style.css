@@ -546,14 +546,44 @@ Skillsの設定
   margin-bottom: 40px;
 }
 
+@media (max-width: 420px) {
+  .skills__ttlH3 {
+    margin-bottom: 20px;
+    text-align: center;
+  }
+}
+
+.skills .flexCoding__container {
+  width: 70%;
+}
+
+@media (max-width: 420px) {
+  .skills .flexCoding__container {
+    width: 100%;
+  }
+}
+
 .skills .ttlDesign {
   margin-bottom: 0;
   margin-left: 0;
   margin-top: 50px;
 }
 
+@media (max-width: 420px) {
+  .skills .ttlDesign {
+    margin-top: 20px;
+    text-align: center;
+  }
+}
+
 .skills .ttlOffice {
   margin-top: 50px;
+}
+
+@media (max-width: 420px) {
+  .skills .ttlOffice {
+    margin-top: 30px;
+  }
 }
 
 .flexDesign__container {
@@ -606,7 +636,7 @@ Skillsの設定
 }
 
 .cat02 {
-  width: 30%;
+  width: 25%;
   margin: auto;
   opacity: .7;
 }
@@ -641,10 +671,12 @@ Contactの設定
 .form {
   padding: 1em;
   text-align: center;
+  width: 1200px;
+  max-width: 100%;
 }
 
 .label {
-  margin-bottom: 30px;
+  margin: 0 auto 30px;
   display: block;
   text-align: center;
 }
@@ -666,7 +698,7 @@ textarea {
 
 textarea {
   height: 11em;
-  width: 500px;
+  max-width: 500px;
 }
 
 input[type="submit"] {
@@ -681,18 +713,6 @@ input[type="submit"] {
 .required {
   color: red;
   font-size: 16px;
-}
-
-.contactBg {
-  position: absolute;
-  top: 610px;
-  background-image: url(../images/cat04.png);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
-  width: 400px;
-  height: 270px;
-  opacity: .5;
 }
 
 /*========================
