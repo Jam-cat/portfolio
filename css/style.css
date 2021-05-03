@@ -11,6 +11,12 @@ body {
   background-color: #fafafa;
 }
 
+@media (max-width: 420px) {
+  body {
+    font-size: 0.875rem;
+  }
+}
+
 header,
 footer {
   background-color: #C57D86;
@@ -183,7 +189,7 @@ Profileの設定
 
 @media (max-width: 420px) {
   .profile__flexRB img {
-    width: 30%;
+    width: 25%;
   }
 }
 
@@ -640,7 +646,15 @@ Skillsの設定
 .flexDesign__LR img,
 .flexOffice__LR img {
   width: 80px;
-  height: 80px;
+  height: auto;
+}
+
+@media (max-width: 420px) {
+  .flexCoding__LR img,
+  .flexDesign__LR img,
+  .flexOffice__LR img {
+    width: 15%;
+  }
 }
 
 .ttlDesign {

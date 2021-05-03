@@ -19,6 +19,10 @@ body {
   font-family: 'Dancing Script', cursive;
   font-family: 'Montserrat', sans-serif;
   background-color: #fafafa;
+
+  @include sp {
+    font-size: 0.875rem;
+  }
 }
 
 header,
@@ -191,7 +195,7 @@ Profileの設定
     img {
       width: 20%;
       @include sp {
-        width: 30%;
+        width: 25%;
       }
       }
     }
@@ -610,7 +614,11 @@ Skillsの設定
 .flexDesign__LR img,
 .flexOffice__LR img {
   width: 80px;
-  height: 80px;
+  height: auto;
+
+  @include sp {
+    width: 15%;
+  }
 }
 
 .ttlDesign {
