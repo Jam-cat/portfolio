@@ -83,7 +83,8 @@ ul, ol {
   margin: 0 auto;
 
   @include sp {
-    width: 100%;
+    width: 95%;
+    margin: 0 auto;
   }
 }
 
@@ -129,9 +130,14 @@ header {
   &__inner {
     background-image: url(../images/cat01.png);
     background-repeat: no-repeat;
-    background-size: 45% auto;
+    background-size: auto 100%;
     background-position: right bottom;
     opacity: .3;
+
+    @include sp {
+      background-size: auto 60%;
+      background-position: right bottom 30px;
+    }
   }
   
   &__ttl {
@@ -141,11 +147,20 @@ header {
     text-align: center;
     font-size: 45px;
     font-weight: bold;
+
+    @include sp {
+      padding: 180px 0;
+      font-size: 30px;
+    }
   }
 }
 
 .portfolio {
   font-size: 100px;
+
+  @include sp {
+    font-size: 70px;
+  }
 }
 
 /*========================
@@ -164,6 +179,10 @@ Profileの設定
     background-size: 200px 200px;
     background-position: center center;
     // opacity: .4;                                          //グレーアイコンと差し替えたら消す
+    @include sp {
+      margin: 20px 0;
+      background-size: 160px 160px;
+    }
   }
 
 // プロフィール 左側 顔写真
@@ -179,6 +198,7 @@ Profileの設定
 
     @include sp {
       flex-direction: column;
+      margin-bottom: 50px;
     }
   }
 
@@ -194,9 +214,6 @@ Profileの設定
       margin-top: 30px;  
     img {
       width: 20%;
-      @include sp {
-        width: 25%;
-      }
       }
     }
     &__flexRB img:nth-child(4) {
@@ -204,8 +221,6 @@ Profileの設定
         display: none;
       }
     }
-
-
   }  //profile
 
 //プロフィールshort
@@ -266,10 +281,6 @@ Profileの設定
 
 .countries {
   margin-top: 50px;
-
-  @include sp {
-    margin-top: 70px;
-  }
 }
 
 // 職歴と派遣就業
@@ -280,6 +291,7 @@ Profileの設定
   
   @include sp {
     flex-direction: column;
+    margin: 50px auto;
   }
 
   &__h3 {
@@ -307,7 +319,7 @@ Profileの設定
 
   &__history {
     @include sp {
-      margin-bottom: 70px;
+      margin-bottom: 50px;
     }
   }
 
@@ -322,7 +334,7 @@ Profileの設定
 
     @include sp {
       margin-top: 0;
-      margin-bottom: 70px;
+      margin-bottom: 50px;
     }
   }
 
@@ -341,6 +353,8 @@ table {
 
   @include sp {
     font-size: 14px;
+    width: 95%;
+    margin: 0 auto;
   }
 }
 
@@ -459,7 +473,6 @@ tbody tr:nth-child(odd) {
 
 }
 
-
 /*========================
 Worksの設定                                            
 ======================== */
@@ -499,7 +512,7 @@ Worksの設定
     width: 30%;
 
     @include sp {
-      margin: 0 auto 20%;
+      margin: 0 auto 15%;
       width: 100%;
     }
   }
@@ -530,13 +543,17 @@ Skillsの設定
     margin-top: 0;
 
     @include sp {
-      padding: 30px 0;
+      padding: 20px 0;
     }
   }
 
   &__period {
     text-align: center;
-    padding-bottom: 50px;
+    margin-bottom: 50px;
+
+    @include sp {
+      margin-bottom: 30px;
+    }
 }
 
   &__ttlH3 {
@@ -617,7 +634,7 @@ Skillsの設定
   height: auto;
 
   @include sp {
-    width: 15%;
+    width: 40px;
   }
 }
 
@@ -650,8 +667,14 @@ Contactの設定
 ======================== */
 .contact {
   background-color: #F5EFEA;
-  padding-top: 100px;
-  padding-bottom: 100px;
+  padding-top: 30px;
+  padding-bottom: 70px;
+  margin-bottom: 0;
+
+  @include sp {
+    padding-top: 0;
+    padding-bottom: 20px;
+  }
 }
 
 iframe {

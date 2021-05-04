@@ -79,7 +79,8 @@ ul, ol {
 
 @media (max-width: 420px) {
   .wrapper {
-    width: 100%;
+    width: 95%;
+    margin: 0 auto;
   }
 }
 
@@ -123,9 +124,16 @@ header {
 .fv__inner {
   background-image: url(../images/cat01.png);
   background-repeat: no-repeat;
-  background-size: 45% auto;
+  background-size: auto 100%;
   background-position: right bottom;
   opacity: .3;
+}
+
+@media (max-width: 420px) {
+  .fv__inner {
+    background-size: auto 60%;
+    background-position: right bottom 30px;
+  }
 }
 
 .fv__ttl {
@@ -136,8 +144,21 @@ header {
   font-weight: bold;
 }
 
+@media (max-width: 420px) {
+  .fv__ttl {
+    padding: 180px 0;
+    font-size: 30px;
+  }
+}
+
 .portfolio {
   font-size: 100px;
+}
+
+@media (max-width: 420px) {
+  .portfolio {
+    font-size: 70px;
+  }
 }
 
 /*========================
@@ -156,6 +177,13 @@ Profileの設定
   background-position: center center;
 }
 
+@media (max-width: 420px) {
+  .profile__ttl {
+    margin: 20px 0;
+    background-size: 160px 160px;
+  }
+}
+
 .profile__flex {
   margin: 0 auto;
   width: 1000px;
@@ -166,6 +194,7 @@ Profileの設定
 @media (max-width: 420px) {
   .profile__flex {
     flex-direction: column;
+    margin-bottom: 50px;
   }
 }
 
@@ -185,12 +214,6 @@ Profileの設定
 
 .profile__flexRB img {
   width: 20%;
-}
-
-@media (max-width: 420px) {
-  .profile__flexRB img {
-    width: 25%;
-  }
 }
 
 @media (max-width: 420px) {
@@ -259,12 +282,6 @@ Profileの設定
   margin-top: 50px;
 }
 
-@media (max-width: 420px) {
-  .countries {
-    margin-top: 70px;
-  }
-}
-
 .jobs {
   width: 1000px;
   max-width: 100%;
@@ -274,6 +291,7 @@ Profileの設定
 @media (max-width: 420px) {
   .jobs {
     flex-direction: column;
+    margin: 50px auto;
   }
 }
 
@@ -305,7 +323,7 @@ Profileの設定
 
 @media (max-width: 420px) {
   .jobs__history {
-    margin-bottom: 70px;
+    margin-bottom: 50px;
   }
 }
 
@@ -322,7 +340,7 @@ Profileの設定
 @media (max-width: 420px) {
   .jobs__break {
     margin-top: 0;
-    margin-bottom: 70px;
+    margin-bottom: 50px;
   }
 }
 
@@ -341,6 +359,8 @@ table {
 @media (max-width: 420px) {
   table {
     font-size: 14px;
+    width: 95%;
+    margin: 0 auto;
   }
 }
 
@@ -518,7 +538,7 @@ Worksの設定
 
 @media (max-width: 420px) {
   .works__item {
-    margin: 0 auto 20%;
+    margin: 0 auto 15%;
     width: 100%;
   }
 }
@@ -551,13 +571,19 @@ Skillsの設定
 
 @media (max-width: 420px) {
   .skills__ttl {
-    padding: 30px 0;
+    padding: 20px 0;
   }
 }
 
 .skills__period {
   text-align: center;
-  padding-bottom: 50px;
+  margin-bottom: 50px;
+}
+
+@media (max-width: 420px) {
+  .skills__period {
+    margin-bottom: 30px;
+  }
 }
 
 .skills__ttlH3 {
@@ -653,7 +679,7 @@ Skillsの設定
   .flexCoding__LR img,
   .flexDesign__LR img,
   .flexOffice__LR img {
-    width: 15%;
+    width: 40px;
   }
 }
 
@@ -690,8 +716,16 @@ Contactの設定
 ======================== */
 .contact {
   background-color: #F5EFEA;
-  padding-top: 100px;
-  padding-bottom: 100px;
+  padding-top: 30px;
+  padding-bottom: 70px;
+  margin-bottom: 0;
+}
+
+@media (max-width: 420px) {
+  .contact {
+    padding-top: 0;
+    padding-bottom: 20px;
+  }
 }
 
 iframe {
