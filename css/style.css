@@ -92,13 +92,25 @@ header {
   height: 100px;
   position: fixed;
   top: 0;
-  left: 0;
   z-index: 1;
+}
+
+@media (max-width: 420px) {
+  header {
+    height: auto;
+    position: static;
+  }
 }
 
 /*========================
 .navの設定
 ======================== */
+@media (max-width: 420px) {
+  .nav {
+    flex-direction: column;
+  }
+}
+
 .nav__list {
   justify-content: space-around;
   text-align: center;
@@ -109,9 +121,22 @@ header {
   font-size: 24px;
 }
 
+@media (max-width: 420px) {
+  .flex01 {
+    font-size: 18px;
+    flex-direction: column;
+  }
+}
+
 .flex01__item {
   flex: 1 1 20%;
-  padding: 30px 0;
+  padding: 1.5rem;
+}
+
+@media (max-width: 420px) {
+  .flex01__item {
+    padding: 20px 0;
+  }
 }
 
 /*========================
@@ -146,7 +171,7 @@ header {
 
 @media (max-width: 420px) {
   .fv__ttl {
-    padding: 180px 0;
+    padding: 100px 0;
     font-size: 30px;
   }
 }
@@ -639,8 +664,17 @@ Skillsの設定
   }
 }
 
+.flexDesign__wrap {
+  align-items: center;
+}
+
 .flexDesign__container {
   margin-top: 30px;
+}
+
+.flexDesign__R {
+  margin: 0 20px 30px 0;
+  width: 100%;
 }
 
 .flexCoding__wrap,
@@ -670,11 +704,6 @@ Skillsの設定
 .flexDesign__R {
   margin-left: 20px;
   margin-bottom: 30px;
-}
-
-.flexDesign__R {
-  margin: 0 20px 30px 0;
-  width: 100%;
 }
 
 .flexCoding__LR img,
