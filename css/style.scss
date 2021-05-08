@@ -98,7 +98,6 @@ ul, ol {
 ======================== */
 header {
   width: 100%;
-  height: 100px;
   position: fixed;
   top: 0;
   z-index: 1;
@@ -114,6 +113,7 @@ header {
 ======================== */
 //PC版ナビゲーション
 .pcnav {
+  padding: 2rem;
   &__list {
     justify-content: space-around;
     text-align: center;
@@ -169,12 +169,12 @@ header {
 }
 
 /*基準となるli要素*/
-.sp-nav .close {
+.spnav .close {
   position: relative;
   padding-left: 20px;
 }
 /*バツ印線1*/
-.sp-nav .close::before {
+.spnav .close::before {
   content: '';
   position: absolute;
   top: 50%;
@@ -187,7 +187,7 @@ header {
 }
 
 /*バツ印線2*/
-.sp-nav .close::after {
+.spnav .close::after {
   content: '';
   position: absolute;
   top: 50%;
@@ -200,6 +200,10 @@ header {
 }
 
 // 右上のハンバーガー
+.hamburgerWrap {
+  padding: 15px;
+}
+
 #hamburger {
   position: relative;
   display: block;
