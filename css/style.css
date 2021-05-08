@@ -882,4 +882,21 @@ footerの設定
   line-height: 60px;
   color: #F5EFEA;
 }
+
+/*=====================================
+スクロールしたらフワッと表示（フェードイン）
+========================================== */
+/* 下からフェードイン */
+.slide-bottom {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 1.3s 0s ease-out;
+}
+
+/* 左からフェードイン */
+.slide-left {
+  opacity: 0;
+  transform: translate(-20px, 0);
+  transition: all 1s ease-out;
+}
 /*# sourceMappingURL=style.css.map */
