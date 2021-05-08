@@ -17,21 +17,51 @@
 <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600&family=Montserrat:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 
-</head>
+  <!-- jQueryの読み込み（スマホハンバーガーメニュー） -->
+<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
 
+<!-- スマホナビの表示・非表示 -->
+<script>
+  $(function() {
+     const hum = $('#hamburger, .close')
+     const nav = $('.spnav')
+     hum.on('click', function(){
+        nav.toggleClass('toggle');
+     });
+  });
+  </script>
+</head>
 
 <body>
     <header class="header">
         <div class="header__inner wrapper">
-        <nav class="nav">
-            <ul class="nav__list flex flex01">
-              <li class="flex01__item"><a href="#top" class="nav__link">Top</a></li>
-              <li class="flex01__item"><a href="#profile" class="nav__link">Profile</a></li>
-              <li class="flex01__item"><a href="#works" class="nav__link">Works</a></li>
-              <li class="flex01__item"><a href="#skills" class="nav__link">Skills</a></li>
-              <li class="flex01__item"><a href="#contact" class="nav__link">Contact</a></li>
+        
+        <!-- PC版のナビゲーションメニュー -->
+        <nav class="pcnav">
+            <ul class="pcnav__list flex flex01">
+              <li class="flex01__item"><a href="#top" class="pcnav__link">Top</a></li>
+              <li class="flex01__item"><a href="#profile" class="pcnav__link">Profile</a></li>
+              <li class="flex01__item"><a href="#works" class="pcnav__link">Works</a></li>
+              <li class="flex01__item"><a href="#skills" class="pcnav__link">Skills</a></li>
+              <li class="flex01__item"><a href="#contact" class="pcnav__link">Contact</a></li>
             </ul>
         </nav>
+
+        <!-- スマホ版のナビゲーションメニュー -->
+        <nav class="spnav">
+          <ul class="spnav__list flex flex01">
+            <li class="flex01__item"><a href="#top" class="spnav__link">Top</a></li>
+            <li class="flex01__item"><a href="#profile" class="spnav__link">Profile</a></li>
+            <li class="flex01__item"><a href="#works" class="spnav__link">Works</a></li>
+            <li class="flex01__item"><a href="#skills" class="spnav__link">Skills</a></li>
+            <li class="flex01__item"><a href="#contact" class="spnav__link">Contact</a></li>
+          </ul>
+      </nav>
+        
+      <!-- 右上のハンバーガー -->
+        <div id="hamburger">
+          <span></span>
+       </div>
         </div><!-- header__inner wrapper -->
     </header>
  
