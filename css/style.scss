@@ -227,8 +227,10 @@ Profileの設定
 
      // 海外ドラマDVD
     &__flexRB {
-      margin-top: 30px;  
-    img {
+      margin-top: 30px;
+      align-items: flex-start; //写真の間延び修正
+
+      img {
       width: 20%;
 
       @include sp {

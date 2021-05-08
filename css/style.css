@@ -235,6 +235,7 @@ Profileの設定
 
 .profile__flexRB {
   margin-top: 30px;
+  align-items: flex-start;
 }
 
 .profile__flexRB img {
