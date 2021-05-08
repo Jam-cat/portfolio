@@ -38,7 +38,7 @@
         <!-- <div class="header__inner wrapper"> -->
         
         <!-- PC版のナビゲーションメニュー -->
-        <nav class="pcnav slide-left show">
+        <nav class="pcnav slide-top show">
             <ul class="pcnav__list flex flex01">
               <li class="flex01__item"><a href="#top" class="pcnav__link">Top</a></li>
               <li class="flex01__item"><a href="#profile" class="pcnav__link">Profile</a></li>
@@ -541,11 +541,8 @@
 <small class="copyright">&copy;2021 Mayuko Amakura all rights reserved</small>
   </footer>
 
-<!-- JSファイルの読み込み
-  <script src="js/script.js"></script> -->
-
   <script>
-    //フェードイン用のコードです
+    //フェードイン用のコード
     $(function(){
       $(window).on('load scroll', function() {
         $(".show").each(function() {
@@ -558,7 +555,6 @@
         });
       });
     });
-    //フェードイン用のコードはここまで。
  </script>   
 </body>
 </html>

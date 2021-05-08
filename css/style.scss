@@ -924,9 +924,9 @@ footerの設定
   transition: all 1.3s 0s ease-out;
 }
 
-/* 左からフェードイン */
-.slide-left {
+/* 上からフェードイン */
+.slide-top {
 	opacity: 0;
-	transform: translate(-20px, 0);
+	transform: translate(0, -20px);
 	transition: all 1s ease-out;
  }
