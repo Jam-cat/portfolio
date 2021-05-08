@@ -1,5 +1,10 @@
 @charset "utf-8";
 
+//@mediaで記載箇所あり（ハンバーガー）
+// @media screen and (max-width: 420px) {
+//   ここにスマホ用のCSS
+// }
+
 //共通設定
 $sp: 420px;
 
@@ -109,37 +114,26 @@ header {
 ======================== */
 //PC版ナビゲーション
 .pcnav {
-  @include sp {
-    display: none;
-  }
   &__list {
     justify-content: space-around;
     text-align: center;
     margin: 0 100px;
-  }
-}
-
-.flex01 {
-  font-size: 24px;
-
-  @include sp {
-    font-size: 18px;
-    flex-direction: column;
-  }
-
-  &__item {
-   flex: 1 1 20%;
-   padding: 1.5rem;
-
-   @include sp {
-     padding: 20px 0;
-   }
+    font-size: 24px;
   }
 }
 
 // スマホ版ナビゲーション
-@include sp {
+.spnav {
+  display: none;
+}
+
+@media screen and (max-width: 420px) {
+.pcnav {
+   display: none;
+  }
+
 .spnav  {
+  font-size: 30px;
   z-index: 1;
   position: fixed;
   top: 0;
@@ -147,7 +141,6 @@ header {
   width: 100%;
   height: 100vh;
   display: block;
-  width: 100%;
   background: rgba(0, 0, 0, .8);
   transition: all .2s ease-in-out;
   opacity: 0; //透明かつ、画面と同じ高さ分上にずらす＝画面の外に出ている状態
@@ -160,7 +153,7 @@ header {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: auto;
+  height: 100%;
 }
 .spnav li {
   margin: 0;
@@ -252,7 +245,7 @@ header {
   transform: translateY( 0 );
   opacity: 1;
   }
-} //.spnav
+} //@media 420px
 
 /*========================
 ファーストビューFVの設定
