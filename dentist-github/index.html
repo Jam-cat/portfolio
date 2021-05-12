@@ -11,29 +11,43 @@
     <!-- <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Philosopher:wght@400;700&display=swap" rel="stylesheet"> -->
 
+    <!-- swiperのため -->
+    <!-- <link rel="stylesheet" href="../package/swiper-bundle.min.css"> -->
+
     <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
-  <header class="header wrap flex" id="top">
-    
+  <header class="header wrap" id="top">
+    <div class="header__inner flex">
       <div class="header__left">
       <h1 class="header__ttl"><a href="#top"><img src="img/header-logo.png" alt="広島XDデンタルクリニック"></a></h1>
       </div><!-- header__left -->
-      
-  <!-- ナビゲーションメニュー -->
-  <nav class="nav slide-top show">
-    <ul class="nav__list flex flex01">
-        <li class="flex01__item"><a href="#top" class="nav__link">トップ</a></li>
-        <li class="flex01__item"><a href="#about" class="nav__link">当院について</a></li>
-        <li class="flex01__item"><a href="#treatInfo" class="nav__link">診療案内</a></li>
-        <li class="flex01__item"><a href="#hours" class="nav__link">診療時間</a></li>
-        <li class="flex01__item"><a href="#access" class="nav__link">アクセス</a></li>
-    </ul>
-</nav>
-</header>   
+
+      <div class="header__right">        
+          <button class="btnMenu" id="btnMenu" type="button">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+      </div><!-- header__right -->
+    </div><!-- header__inner flex -->
+  </header>
+
+    <nav class="nav" id="nav">   
+        <ul class="nav__list flex">
+            <li class="nav__item"><a href="#top">トップ</a></li>
+            <li class="nav__item"><a href="#about">当院について</a></li>
+            <li class="nav__item"><a href="#treatInfo">診療案内</a></li>
+            <li class="nav__item"><a href="#hours">診療時間</a></li>
+            <li class="nav__item"><a href="#access">アクセス</a></li>
+        </ul>
+    </nav>
             
-  <!-- <p class="btn"><input type="submit" class="btnInput" value="24時間Web予約"></p> -->
+        <!-- <p class="btn"><input type="submit" class="btnInput" value="24時間Web予約"></p> -->
+      <!-- </div>header__right  -->
+    <!-- </div>header__inner -->
+  <!-- </header> -->
 
   <!-- ---------- ファーストビュー----------------- -->
   
@@ -194,20 +208,18 @@
 
   <script src="js/script.js"></script>
 
-  <script>
-    //フェードイン用のコード
-    $(function(){
-      $(window).on('load scroll', function() {
-        $(".show").each(function() {
-          var winScroll = $(window).scrollTop();
-          var winHeight = $(window).height();
-          var scrollPos = winScroll + (winHeight * 0.9);
-          if($(this).offset().top < scrollPos) {
-            $(this).css({opacity: 1, transform: 'translate(0, 0)'});
-          }
-        });
-      });
+  <!-- Swiper JS -->
+  <!-- <script src="../package/swiper-bundle.min.js"></script> -->
+
+  <!-- Initialize Swiper -->
+  <!-- <script>
+    var swiper = new Swiper('.swiper-container', {
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
     });
- </script>
+  </script> -->
 </body>
+
 </html>
