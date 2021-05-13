@@ -17,23 +17,23 @@ $accent_color:#14C35E;
 
 .wrapper {
   margin: 0 auto;
-  //max-width: 767px;                   //要確認
+  max-width: 767px;                   //要確認
   
-  // @include pc {
-  //   max-width: 1200px;
-  //   padding-left: 20px;
-  //   padding-right: 20px;   
-  // }
+  @include pc {
+    max-width: 1200px;
+    padding-left: 20px;
+    padding-right: 20px;   
+  }
 }
 
  .section {
   margin-top: 80px;
   margin-bottom: 20px;
 
-  // @include pc {
-  //   margin-top: 50px;
-  //   margin-bottom: 50px;
-  // }
+  @include pc {
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
 }
 
 //各セクションタイトル
@@ -120,131 +120,7 @@ input[type="submit"] {
 
 /* ハンバーガーメニュー
 --------------------------------*/
-a {
-  color: #555;
-}
-
- .flex {
-  display: flex;
-  flex-direction: column;
-   
-   @include pc {
-     display: none;
-     justify-content: space-between;
-   }  
- }
-
- header {
-  background: #A8DBA8;
-  padding: .5em 1.5em;
-  position: fixed;
-  top: 0;
-  width: 100%;
-  
-   @include pc {
-     padding: 1em 1.5em;
-   }
-}
-
-header .wrapper {
-  display: flex;
-  justify-content: space-between;
-  padding:0 20px;
-}
-
- .header__left {
-   margin: 0 auto;
-   
-   @include pc {
-     margin:0 auto 0 0;
-   }
- }
-
- .header__right {
-   margin: auto 0;
-   display: none;
-   
-   @include pc {
-     display: none;
-   }
- }
-
-input[type="number"],
-select {
-  border: 1px solid #79BD9A;
-  border-radius: 5px;
-  padding: .5em;
-  background: #fff;
-}
-
-.btnMenu {
-  width: 50px;
-  height: 50px;
-  padding: 10px 5px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  border: 2px solid #555;
-  border-radius: 5px;
-  margin-left: auto;
-}
-
-.btnMenu:focus {
-  outline: none;  
-}
-
-.btnMenu span {
-  background: #555;
-  display: block;
-  width: 100%;
-  height: 5px;
-}
-
-.close span:first-child {
-  transform: rotate(45deg) translate(4px, -5px);
-  transform-origin: left top;
-}
-
-.close span:nth-child(2)  {
-  transform: rotate(-45deg) translate(7px, -7px);
-}
-
-.close span:last-child {
-  display: none;
-}
-
-#nav {
-  display: none;
-  
-  @include pc {
-    display: flex;
-  }
-}
-
-#nav.open {
-  display: block;
-  position: fixed;
-  top: 70px;
-  right: 0;
-  background: #fff;
-  //padding: 0 30px;
-  z-index: 100;
-}
-
-.nav__list {
-  width: 30vw;
-  height: auto;
-}
-
-.nav__item {
-  border-bottom: 1px dotted #79BD9A;
-}
-
-.nav__link {
-  padding: .8em 0px .8em 1em;
-  display: block;
-}
-/* -----ハンバーガーメニューここまで------*/
+ /* -----ハンバーガーメニューここまで------*/
 
 /*  ヘッダー
 --------------------------------*/
@@ -327,10 +203,10 @@ header p {
   margin-bottom: 50px;
 }
 
-// .treat {
-//   @include pc {
-//     min-width: 1200px;
-//   }
+.treat {
+  @include pc {
+    min-width: 1200px;
+  }
   
   &__01 p,
   &__02 p,
@@ -465,4 +341,5 @@ table td {
     text-align: center;
     padding: 30px 0;
   }
+}
 }
