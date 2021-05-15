@@ -227,10 +227,11 @@ header p {
   padding-top: 0;
   margin-bottom: 50px; }
 
-.treat {
+/* .treat { */
   /*@include pc {
     min-width: 1200px;
-  }*/ }
+  }*/ 
+
   .treat__01 p, .treat__02 p, .treat__03 p {
     padding: 0 30px; }
   .treat__02, .treat__03 {
