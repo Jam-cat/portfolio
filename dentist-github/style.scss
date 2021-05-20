@@ -29,6 +29,10 @@ $accent_color:#14C35E;
  .section {
   margin-top: 80px;
   margin-bottom: 20px;
+
+  @include sp {
+    margin-top: 40px;
+  }
 }
 
 .flex {
@@ -45,7 +49,9 @@ h2 {
   text-align: center;
   
   @include sp {
-    font-size: 20px;
+    font-size: 16px;
+    padding-top: 30px;
+    margin-bottom: 0;
   }
 }
 
@@ -120,6 +126,14 @@ img {
   display: flex;
   justify-content: center;
   align-items: center;
+
+  @include sp {
+    margin: 0 auto;
+    font-size: 16px;
+    width: 130px;
+    height: 60px;
+    padding: 8px;
+  }
 }
 
 /*  ヘッダー・nav
@@ -136,6 +150,8 @@ img {
   
    @include sp {
      padding: .5em 1.5em;
+     height: 75px;
+     position: static;
    }
 
    &__inner {
@@ -150,19 +166,44 @@ img {
    &__ttl {
      width: 260px;
      height: auto;
+
+     @include sp {
+       width: 220px;
+       margin: 0 auto;
+     }
    }
 }
 
 .nav-right {
-  display: flex;  
+  display: flex;
+
+  @include sp {
+    flex-direction: column;
+  }
 }
 
 .nav {
   align-items: center;
 
+  @include sp {
+    display: block;
+  }
+
+  &__list {
+    @include sp {
+      flex-direction: column;
+      text-align: center;
+    }
+  }
+
   &__item {
     padding: 15px 14px;
     font-size: 18px;
+
+    @include sp {
+      padding: 10px 0;
+      font-size: 16px;
+    }
   }
 
   &__link {
@@ -195,14 +236,20 @@ select {
 
 /*  ファーストビューFV
 -------------------------------------*/
-.fv img {
+.fv {
+  @include sp {
+    padding-top: 280px;
+  }
+
+img {
   width: 100vw;
+  }
 }
 
 /*  当院について about
 -------------------------------------*/
 .about {
-  margin-top: 0;
+  margin-top: -10px;
   
   &__ttl {
     margin-top: 0;
@@ -227,9 +274,13 @@ select {
 
   img {
     padding-bottom: 80px;
-    width: 70%;
+    width: 80%;
     display: block;
     margin: 0 auto;
+
+    @include sp {
+      padding-bottom: 40px;
+    }
   }
 }
 
@@ -243,13 +294,32 @@ select {
 .treatInfo h2 {
   padding-top: 0;
   margin-bottom: 50px;
+
+  @include sp {
+    margin-bottom: 0;
+  }
 }
 
 .treat {
+  @include sp {
+    flex-direction: column;
+  }
+
   &__01,
   &__02,
   &__03{
     width: 30%;
+
+    @include sp {
+      width: 100%;
+      margin-top: 50px;
+    }
+
+   h3 {
+     @include sp {
+       margin: 10px 0;
+     }
+   }
   }
 
   &__01 p,
@@ -257,6 +327,18 @@ select {
   &__03 p {
     padding: 0 30px;
   }
+
+  &__01 img,
+  &__02 img,
+  &__03 img {
+    @include sp {
+      width: 90%;
+      display: block;
+      margin: 0 auto;
+    }
+  }
+
+
 }
 
 // ここまでOK 関数spへ読み替えただけ。設定変更はまだ。
@@ -266,6 +348,10 @@ select {
 .hours {
   background-color: $sub_color;
   padding-bottom: 50px;
+
+  @include sp {
+    padding-bottom: 30px;
+  }
 }
 
 // 診療時間一覧 table

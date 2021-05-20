@@ -12,6 +12,12 @@
   margin-bottom: 20px;
 }
 
+@media (max-width: 420px) {
+  .section {
+    margin-top: 40px;
+  }
+}
+
 .flex {
   display: flex;
   justify-content: space-between;
@@ -27,7 +33,9 @@ h2 {
 
 @media (max-width: 420px) {
   h2 {
-    font-size: 20px;
+    font-size: 16px;
+    padding-top: 30px;
+    margin-bottom: 0;
   }
 }
 
@@ -105,6 +113,16 @@ img {
   align-items: center;
 }
 
+@media (max-width: 420px) {
+  .btn {
+    margin: 0 auto;
+    font-size: 16px;
+    width: 130px;
+    height: 60px;
+    padding: 8px;
+  }
+}
+
 /*  ヘッダー・nav
 --------------------------------------*/
 .header {
@@ -121,6 +139,8 @@ img {
 @media (max-width: 420px) {
   .header {
     padding: .5em 1.5em;
+    height: 75px;
+    position: static;
   }
 }
 
@@ -140,17 +160,50 @@ img {
   height: auto;
 }
 
+@media (max-width: 420px) {
+  .header__ttl {
+    width: 220px;
+    margin: 0 auto;
+  }
+}
+
 .nav-right {
   display: flex;
+}
+
+@media (max-width: 420px) {
+  .nav-right {
+    flex-direction: column;
+  }
 }
 
 .nav {
   align-items: center;
 }
 
+@media (max-width: 420px) {
+  .nav {
+    display: block;
+  }
+}
+
+@media (max-width: 420px) {
+  .nav__list {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
 .nav__item {
   padding: 15px 14px;
   font-size: 18px;
+}
+
+@media (max-width: 420px) {
+  .nav__item {
+    padding: 10px 0;
+    font-size: 16px;
+  }
 }
 
 .nav__link {
@@ -180,6 +233,12 @@ select {
 
 /*  ファーストビューFV
 -------------------------------------*/
+@media (max-width: 420px) {
+  .fv {
+    padding-top: 280px;
+  }
+}
+
 .fv img {
   width: 100vw;
 }
@@ -187,7 +246,7 @@ select {
 /*  当院について about
 -------------------------------------*/
 .about {
-  margin-top: 0;
+  margin-top: -10px;
 }
 
 .about__ttl {
@@ -213,9 +272,15 @@ select {
 
 .kidsSvc img {
   padding-bottom: 80px;
-  width: 70%;
+  width: 80%;
   display: block;
   margin: 0 auto;
+}
+
+@media (max-width: 420px) {
+  .kidsSvc img {
+    padding-bottom: 40px;
+  }
 }
 
 /*  診療案内 treatInfo
@@ -229,8 +294,33 @@ select {
   margin-bottom: 50px;
 }
 
+@media (max-width: 420px) {
+  .treatInfo h2 {
+    margin-bottom: 0;
+  }
+}
+
+@media (max-width: 420px) {
+  .treat {
+    flex-direction: column;
+  }
+}
+
 .treat__01, .treat__02, .treat__03 {
   width: 30%;
+}
+
+@media (max-width: 420px) {
+  .treat__01, .treat__02, .treat__03 {
+    width: 100%;
+    margin-top: 50px;
+  }
+}
+
+@media (max-width: 420px) {
+  .treat__01 h3, .treat__02 h3, .treat__03 h3 {
+    margin: 10px 0;
+  }
 }
 
 .treat__01 p,
@@ -239,11 +329,27 @@ select {
   padding: 0 30px;
 }
 
+@media (max-width: 420px) {
+  .treat__01 img,
+  .treat__02 img,
+  .treat__03 img {
+    width: 90%;
+    display: block;
+    margin: 0 auto;
+  }
+}
+
 /*  診療時間 hours
 --------------------------------*/
 .hours {
   background-color: #FFFAF2;
   padding-bottom: 50px;
+}
+
+@media (max-width: 420px) {
+  .hours {
+    padding-bottom: 30px;
+  }
 }
 
 .tableWrap {
