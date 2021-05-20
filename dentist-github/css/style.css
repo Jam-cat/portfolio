@@ -31,6 +31,12 @@ h2 {
   text-align: center;
 }
 
+@media (max-width: 900px) {
+  h2 {
+    font-size: 20px;
+  }
+}
+
 @media (max-width: 420px) {
   h2 {
     font-size: 16px;
@@ -113,10 +119,18 @@ img {
   align-items: center;
 }
 
+@media (max-width: 900px) {
+  .btn {
+    font-size: 1rem;
+    margin: 0 auto;
+    width: 150px;
+    height: 65px;
+  }
+}
+
 @media (max-width: 420px) {
   .btn {
     margin: 0 auto;
-    font-size: 16px;
     width: 130px;
     height: 60px;
     padding: 8px;
@@ -136,7 +150,7 @@ img {
   justify-content: space-around;
 }
 
-@media (max-width: 420px) {
+@media (max-width: 768px) {
   .header {
     padding: .5em 1.5em;
     height: 75px;
@@ -149,7 +163,7 @@ img {
   max-width: 100%;
 }
 
-@media (max-width: 420px) {
+@media (max-width: 768px) {
   .header__inner {
     flex-direction: column;
   }
@@ -160,10 +174,16 @@ img {
   height: auto;
 }
 
+@media (max-width: 900px) {
+  .header__ttl {
+    width: 240px;
+    margin: 0 auto;
+  }
+}
+
 @media (max-width: 420px) {
   .header__ttl {
     width: 220px;
-    margin: 0 auto;
   }
 }
 
@@ -171,7 +191,7 @@ img {
   display: flex;
 }
 
-@media (max-width: 420px) {
+@media (max-width: 768px) {
   .nav-right {
     flex-direction: column;
   }
@@ -181,13 +201,13 @@ img {
   align-items: center;
 }
 
-@media (max-width: 420px) {
+@media (max-width: 768px) {
   .nav {
     display: block;
   }
 }
 
-@media (max-width: 420px) {
+@media (max-width: 768px) {
   .nav__list {
     flex-direction: column;
     text-align: center;
@@ -199,10 +219,16 @@ img {
   font-size: 18px;
 }
 
+@media (max-width: 768px) {
+  .nav__item {
+    padding: 10px;
+    font-size: 16px;
+  }
+}
+
 @media (max-width: 420px) {
   .nav__item {
     padding: 10px 0;
-    font-size: 16px;
   }
 }
 
@@ -233,7 +259,7 @@ select {
 
 /*  ファーストビューFV
 -------------------------------------*/
-@media (max-width: 420px) {
+@media (max-width: 768px) {
   .fv {
     padding-top: 280px;
   }
@@ -300,6 +326,12 @@ select {
   }
 }
 
+@media (max-width: 768px) {
+  .treat {
+    flex-wrap: wrap;
+  }
+}
+
 @media (max-width: 420px) {
   .treat {
     flex-direction: column;
@@ -308,6 +340,12 @@ select {
 
 .treat__01, .treat__02, .treat__03 {
   width: 30%;
+}
+
+@media (max-width: 768px) {
+  .treat__01, .treat__02, .treat__03 {
+    width: 47%;
+  }
 }
 
 @media (max-width: 420px) {
@@ -336,6 +374,12 @@ select {
     width: 90%;
     display: block;
     margin: 0 auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .treat__03 {
+    margin-top: 50px;
   }
 }
 

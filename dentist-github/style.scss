@@ -2,16 +2,23 @@
 
 /*共通設定
 ----------------------------------------*/
-$sp: 420px;
-@mixin sp {
-  @media (max-width: ($sp)) {
+$sp420: 420px;
+@mixin sp420 {
+  @media (max-width: ($sp420)) {
     @content;
   }
 }
 
-$tablet: 900px; 
-@mixin tablet {
-  @media (min-width: ($tablet)) {
+$tab900: 900px; 
+@mixin tab900 {
+  @media (max-width: ($tab900)) {
+    @content;
+  }
+}
+
+$tab768: 768px; 
+@mixin tab768 {
+  @media (max-width: ($tab768)) {
     @content;
   }
 }
@@ -30,7 +37,7 @@ $accent_color:#14C35E;
   margin-top: 80px;
   margin-bottom: 20px;
 
-  @include sp {
+  @include sp420 {
     margin-top: 40px;
   }
 }
@@ -48,7 +55,11 @@ h2 {
   padding-top: 50px;
   text-align: center;
   
-  @include sp {
+  @include tab900 {
+    font-size: 20px;
+  }
+  
+  @include sp420 {
     font-size: 16px;
     padding-top: 30px;
     margin-bottom: 0;
@@ -66,7 +77,7 @@ h3 {
   margin: 20px 20px 30px 20px;
   text-align: center;
   
-  @include sp {
+  @include sp420 {
     font-size: 16px;
   }
 }
@@ -80,7 +91,7 @@ p {
   font-size: 1rem;
   line-height: 1.8;
   
-  @include sp {
+  @include sp420 {
     font-size: 0.875rem;
   }
 }
@@ -127,9 +138,15 @@ img {
   justify-content: center;
   align-items: center;
 
-  @include sp {
+  @include tab900 {
+    font-size: 1rem;
     margin: 0 auto;
-    font-size: 16px;
+    width: 150px;
+    height: 65px;
+  }
+
+  @include sp420 {
+    margin: 0 auto;
     width: 130px;
     height: 60px;
     padding: 8px;
@@ -148,7 +165,7 @@ img {
   display: flex;
   justify-content: space-around;
   
-   @include sp {
+   @include tab768 {
      padding: .5em 1.5em;
      height: 75px;
      position: static;
@@ -158,18 +175,26 @@ img {
      width: 1200px;
      max-width: 100%;
 
-     @include sp {
-      flex-direction: column;
+     @include tab768 {
+       flex-direction: column;
      }
+
+    //  @include sp420 {
+    //   flex-direction: column;
+    //  }
    }
 
    &__ttl {
      width: 260px;
      height: auto;
 
-     @include sp {
+    @include tab900 {
+      width: 240px;
+      margin: 0 auto;
+    }
+
+     @include sp420 {
        width: 220px;
-       margin: 0 auto;
      }
    }
 }
@@ -177,20 +202,26 @@ img {
 .nav-right {
   display: flex;
 
-  @include sp {
-    flex-direction: column;
-  }
+@include tab768 {
+  flex-direction: column;
+}
+  // @include sp420 {
+  //   flex-direction: column;
+  // }
 }
 
 .nav {
   align-items: center;
 
-  @include sp {
+  @include tab768 {
     display: block;
   }
+  // @include sp420 {
+  //   display: block;
+  // }
 
   &__list {
-    @include sp {
+    @include tab768 {
       flex-direction: column;
       text-align: center;
     }
@@ -200,9 +231,13 @@ img {
     padding: 15px 14px;
     font-size: 18px;
 
-    @include sp {
-      padding: 10px 0;
+    @include tab768 {
+      padding: 10px;
       font-size: 16px;
+    }
+
+    @include sp420 {
+      padding: 10px 0;
     }
   }
 
@@ -237,7 +272,7 @@ select {
 /*  ファーストビューFV
 -------------------------------------*/
 .fv {
-  @include sp {
+  @include tab768 {
     padding-top: 280px;
   }
 
@@ -278,7 +313,7 @@ img {
     display: block;
     margin: 0 auto;
 
-    @include sp {
+    @include sp420 {
       padding-bottom: 40px;
     }
   }
@@ -295,13 +330,18 @@ img {
   padding-top: 0;
   margin-bottom: 50px;
 
-  @include sp {
+  @include sp420 {
     margin-bottom: 0;
   }
 }
 
 .treat {
-  @include sp {
+  @include tab768 {
+    flex-wrap: wrap;
+    // flex-direction: column;
+  }
+
+  @include sp420 {
     flex-direction: column;
   }
 
@@ -310,13 +350,17 @@ img {
   &__03{
     width: 30%;
 
-    @include sp {
+    @include tab768 {
+      width: 47%;
+    }
+
+    @include sp420 {
       width: 100%;
       margin-top: 50px;
     }
 
    h3 {
-     @include sp {
+     @include sp420 {
        margin: 10px 0;
      }
    }
@@ -331,17 +375,19 @@ img {
   &__01 img,
   &__02 img,
   &__03 img {
-    @include sp {
+    @include sp420 {
       width: 90%;
       display: block;
       margin: 0 auto;
     }
   }
 
-
+  &__03 {
+    @include tab768 {
+      margin-top: 50px;
+    }
+  }
 }
-
-// ここまでOK 関数spへ読み替えただけ。設定変更はまだ。
 
 /*  診療時間 hours
 --------------------------------*/
@@ -349,7 +395,7 @@ img {
   background-color: $sub_color;
   padding-bottom: 50px;
 
-  @include sp {
+  @include sp420 {
     padding-bottom: 30px;
   }
 }
