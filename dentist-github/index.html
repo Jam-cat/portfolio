@@ -11,10 +11,28 @@
     <link rel="stylesheet" href="css/style.css">
 
 <!-- google font -->
+
+<!-- tab768以下ナビ（ハンバーガー）用 -->
+<script src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous"></script>
+
+<!-- スマホナビの表示・非表示 -->
+<script>
+  $(function() {
+     const hum = $('#hamburger, .close')
+     const nav = $('.sp-nav')
+     hum.on('click', function(){
+        nav.toggleClass('toggle');
+     });
+  });
+  </script>
+
 </head>
 
 <body>
+  
   <header class="header" id="top">
+
+    <!-- PC版ナビゲーション -->
     <div class="header__inner flex">
       <h1 class="header__ttl"><a href="#top">
         <img src="img/header-logo.png" alt="広島XDデンタルクリニック"></a>
@@ -33,6 +51,29 @@
         <p class="btn"><input type="submit" class="btnInput" value="24時間Web予約"></p>
       </div><!-- nav-right -->
     </div>
+    <!-- PC版ナビゲーション終わり -->
+
+    <!-- tablet768以下のナビゲーション -->
+    <nav class="sp-nav">
+      <ul>
+         <li><a href="#top">トップ</a></li>
+         <li><a href="#about">当院について</a></li>
+         <li><a href="#treatInfo">診療案内</a></li>
+         <li><a href="#hours">診療時間</a></li>
+         <li><a href="#access">アクセス</a></li>
+         <li class="btn"><input type="submit" class="btnInput" value="24時間Web予約"></li>
+          <li class="close"><span>閉じる</span></li>
+      </ul>
+    </nav>
+    <h1 class="header2-h1"><a href="#top">
+      <img src="img/header-logo.png" alt="広島XDデンタルクリニック"></a>
+    </h1>
+
+    <div id="hamburger">
+      <span></span>
+   </div>
+
+
   </header>
 
   <!-- ---------- ファーストビュー------------ -->  

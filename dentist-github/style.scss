@@ -168,7 +168,7 @@ img {
    @include tab768 {
      padding: .5em 1.5em;
      height: 75px;
-     position: static;
+     //position: static;
    }
 
    &__inner {
@@ -176,12 +176,9 @@ img {
      max-width: 100%;
 
      @include tab768 {
-       flex-direction: column;
+       //flex-direction: column;
+       display: none;
      }
-
-    //  @include sp420 {
-    //   flex-direction: column;
-    //  }
    }
 
    &__ttl {
@@ -192,10 +189,6 @@ img {
       width: 240px;
       margin: 0 auto;
     }
-
-     @include sp420 {
-       width: 220px;
-     }
    }
 }
 
@@ -269,17 +262,145 @@ select {
   margin-left: auto;
 }
 
+// tab768以下のナビゲーション
+.header2-h1 {
+  display: none;
+
+  @include tab768 {
+    display: block;
+    width: 230px;
+  }
+}
+
+#hamburger {
+display: none;
+
+  @include tab768 {
+  position: relative;
+  display: block;
+  width: 30px;
+  height: 25px;
+  margin: 15px 0 15px auto;
+  }
+}
+
+#hamburger span {
+  display: none;
+
+  @include tab768 {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: #fff;
+  transform: translateY(-50%);
+  }
+}
+
+#hamburger::before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #fff;
+}
+
+#hamburger::after {
+  content: '';
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 70%;
+  height: 2px;
+  background-color: #fff;
+}
+
+.sp-nav {
+  z-index: 1;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  display: block;
+  width: 100%;
+  background: rgba(0, 0, 0, .8);
+  transition: all .2s ease-in-out;
+  opacity: 0;
+  transform: translateY(-100%);
+}
+
+.sp-nav ul {
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+.sp-nav li {
+  margin: 0;
+  padding: 0;
+}
+
+.sp-nav li span {
+  font-size: 15px;
+  color: #fff;
+}
+.sp-nav li a, .sp-nav li span {
+  display: block;
+  padding: 20px 0;
+  color: #fff;
+}
+
+/*基準となるli要素*/
+.sp-nav .close {
+  position: relative;
+  padding-left: 20px;
+}
+/*バツ印線1*/
+.sp-nav .close::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  display: block;
+  width: 16px;
+  height: 1px;
+  background: #fff;
+  transform: rotate( 45deg );
+}
+
+/*バツ印線2*/
+.sp-nav .close::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  display: block;
+  width: 16px;
+  height: 1px;
+  background: #fff;
+  transform: rotate( -45deg );
+}
+
+.toggle {
+  transform: translateY( 0 );
+  opacity: 1;
+}
+
+
 /*  ファーストビューFV
 -------------------------------------*/
-.fv {
-  @include tab768 {
-    padding-top: 280px;
-  }
-
 img {
   width: 100vw;
   }
-}
 
 /*  当院について about
 -------------------------------------*/
