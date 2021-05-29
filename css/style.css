@@ -72,8 +72,8 @@ ul, ol {
 .wrapperの設定
 ======================== */
 .wrapper {
-  width: 1200px;
-  max-width: 100%;
+  width: 95%;
+  max-width: 1200px;
   margin: 0 auto;
 }
 
@@ -404,8 +404,15 @@ Profileの設定
   }
 }
 
-.countries {
-  margin-top: 50px;
+.countries,
+.nochange {
+  margin-top: 40px;
+}
+
+.japanbest {
+  font-weight: bold;
+  color: red;
+  font-size: 24px;
 }
 
 .jobs {
